@@ -20,6 +20,8 @@ get_header(); ?>
 
 						<?php get_search_form(); ?>
 
+
+
 						<div class="row">
 							<div class="col-md-6 not-found-widget">
 								<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
