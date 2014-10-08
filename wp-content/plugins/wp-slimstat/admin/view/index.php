@@ -1,8 +1,8 @@
 <?php if (!function_exists('add_action')) exit(0); ?>
 
 <div class="wrap slimstat">
-	<h2><?php echo wp_slimstat_reports::$screen_names[wp_slimstat_reports::$current_tab] ?></h2>
-	
+	<h2><?php echo wp_slimstat_reports::$screen_names[wp_slimstat_admin::$current_tab] ?></h2>
+
 	<form action="<?php echo wp_slimstat_reports::fs_url(); ?>" method="post" id="slimstat-filters-form">
 		<fieldset id="slimstat-filters"><?php
 			$filter_name_html = '<select name="f" id="slimstat-filter-name">';
@@ -21,6 +21,7 @@
 			$filter_operator_html .= '<option value="sounds_like">'.__('sounds like','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="is_greater_than">'.__('is greater than','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="is_less_than">'.__('is less than','wp-slimstat').'</option>';
+			$filter_operator_html .= '<option value="between">'.__('is between (x,y)','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="matches">'.__('matches','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="does_not_match">'.__('does not match','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="is_empty">'.__('is empty','wp-slimstat').'</option>';
@@ -43,7 +44,7 @@
 		<fieldset id="slimstat-date-filters" class="wp-ui-highlight">
 			<a href="#"><?php
 				if (!empty(wp_slimstat_db::$filters_normalized['date']['hour'])){
-					echo ucwords(gmdate(wp_slimstat_db::$formats['date_time_format'], wp_slimstat_db::$filters_normalized['utime']['start']).' - '.gmdate(wp_slimstat_db::$formats['time_format'], wp_slimstat_db::$filters_normalized['utime']['end']));
+					echo ucwords(gmdate(wp_slimstat::$options['date_time_format'], wp_slimstat_db::$filters_normalized['utime']['start']).' - '.gmdate(wp_slimstat_db::$formats['time_format'], wp_slimstat_db::$filters_normalized['utime']['end']));
 				}
 				else if (!empty(wp_slimstat_db::$filters_normalized['date']['day']) && empty(wp_slimstat_db::$filters_normalized['date']['interval'])){
 					echo ucwords(gmdate(wp_slimstat_db::$formats['date_format'], wp_slimstat_db::$filters_normalized['utime']['start']));
@@ -113,7 +114,7 @@
 	<div class="meta-box-sortables">
 		<form style="display:none" method="get" action=""><input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="<?php echo wp_slimstat_reports::$meta_report_order_nonce ?>" /></form><?php
 
-		switch(wp_slimstat_reports::$current_tab){
+		switch(wp_slimstat_admin::$current_tab){
 			case 1:
 				include_once(dirname(__FILE__).'/right-now.php');
 				break;
@@ -149,7 +150,7 @@
 							break;
 						case 'slim_p1_05':
 						case 'slim_p3_08':
-							wp_slimstat_reports::report_header($a_box_id, 'wide', __('Take a sneak peek at what human visitors are doing on your website.','wp-slimstat').'<br><br><strong>'.__('Color codes','wp-slimstat').'</strong><p class="legend"><span class="little-color-box is-search-engine" style="padding:0 5px">&nbsp;&nbsp;</span> '.__('From a search result page','wp-slimstat').'</p><p class="legend"><span class="little-color-box is-known-visitor" style="padding:0 5px">&nbsp;&nbsp;</span> '.__('Known Visitor','wp-slimstat').'</p><p class="legend"><span class="little-color-box is-known-user" style="padding:0 5px">&nbsp;&nbsp;</span> '.__('Known Users','wp-slimstat').'</p><p class="legend"><span class="little-color-box is-direct" style="padding:0 5px">&nbsp;&nbsp;</span> '.__('Other Humans','wp-slimstat').'</p>');
+							wp_slimstat_reports::report_header($a_box_id, 'wide', __('Color codes','wp-slimstat').'</strong><p><span class="little-color-box is-search-engine"></span> '.__('From search result page','wp-slimstat').'</p><p><span class="little-color-box is-known-visitor"></span> '.__('Known Visitor','wp-slimstat').'</p><p><span class="little-color-box is-known-user"></span> '.__('Known Users','wp-slimstat').'</p><p><span class="little-color-box is-direct"></span> '.__('Other Humans','wp-slimstat').'</p><p><span class="little-color-box"></span> '.__('Bot or Crawler','wp-slimstat').'</p>');
 							break;
 						case 'slim_p1_06':
 						case 'slim_p3_09':
