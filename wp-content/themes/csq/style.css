@@ -1,0 +1,45 @@
+.bg_01 {
+	background-image: url(images/piece.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+TD {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#4C4C4C;
+	line-height:13px;}
+	
+a:link, a:active, a:hover, a:visited {
+	font-family:Tahoma;
+	font-size:11px;
+	color:#D76900;
+	text-decoration:underline;}
+a.small_link:active, a.small_link:visited, a.small_link:hover, a.small_link:link { font-size:10px;}
+
+.t_date { color:#9D9D9D;}
+.t_list {
+	font-weight:bold;
+	color:#2E8F03;}
+.t_rights {
+	font-size:10px;
+	color:#929292;}
+.t_box { color:#000000;}
+.box {
+	height:17px;
+	width:232px;
+	border:1px solid #434343;
+	background-color:#FFFFFF;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+	padding-left:4px;}	
+.multibox {
+	height:111px;
+	width:232px;
+	border:1px solid #434343;
+	background-color:#FFFFFF;
+	font-family:Tahoma;
+	font-size:11px;
+	color:#000000;
+	padding-left:4px;}	

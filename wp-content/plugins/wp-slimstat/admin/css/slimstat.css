@@ -1,5 +1,5 @@
 /* Links */
-.wrap.slimstat a{
+.wrap.slimstat a, [id^=slim_] a{
 	outline: none;
 	text-decoration: none;
 }
@@ -63,7 +63,7 @@
 	position: absolute;
 	right: 0;
 	top: 30px;
-	width: 300px;
+	width: 450px;
 	z-index: 120;
 }
 #slimstat-date-filters span a.slimstat-date-choice{
@@ -83,7 +83,10 @@
 }
 #slimstat-date-filters span select, #slimstat-date-filters span input{
 	margin-bottom: 5px;
-	width: 28%;
+	width: 80px;
+}
+#slimstat-date-filters span select.short, #slimstat-date-filters span input.short{
+	width: 50px;
 }
 #slimstat-date-filters span .ui-datepicker-trigger{
 	float: right;
@@ -93,25 +96,26 @@
 	background-color: #c0c0c0;
 	color: #fff;
 	font-size: 1.1em;
-	padding: 10px 5px 8px;
+	overflow: hidden;
+	padding: 5px;
 	position: relative;
 }
 #slimstat-current-filters .slimstat-remove-filter{
 	color: #fff;
 }
 #slimstat-current-filters .slimstat-filter-list{
+	float: left;
 	margin: 0;
-	padding: 0 75px 0 0;
+	padding: 4px 0 5px 5px;;
 }
 #slimstat-current-filters .slimstat-filter-list li{
 	display: inline;
-	margin-right: 20px;
-	text-transform: lowercase;
+	margin: 0 20px 0 0;
+	vertical-align: middle;
 }
-#slimstat-remove-all-filters{
-	position: absolute;
-	right: 5px;
-	top: 4px;
+.slimstat-filter-action-button{
+	float: right;
+	margin-left: 10px !important;
 }
 
 /* Reports: Container */
@@ -330,8 +334,8 @@
 	border: 0;
 	border-radius: 0;
 	padding: 0;
-	width: 80% !important;
-	z-index: 1005 !important;
+	width: 90% !important;
+	z-index: 100500 !important;
 }
 .ui-dialog.slimstat .ui-dialog-titlebar{
 	background: #4b8df8;
@@ -351,7 +355,7 @@
 	border: 0;
 	color: #fff;
 	float: right;
-	line-height: 1em;
+	line-height: 1.3em;
 	padding: 0;
 }
 .ui-dialog.slimstat .ui-dialog-titlebar-close:before{
@@ -366,6 +370,10 @@
 	display: none;
 	padding: 0;
 	width: auto;
+}
+#slimstat-modal-dialog p{
+	margin: 0;
+	padding: 10px;
 }
 
 /* Add-on: WP SlimStat - Dashboard Widgets */

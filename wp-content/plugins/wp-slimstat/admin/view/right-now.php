@@ -4,7 +4,7 @@ if (!function_exists('add_action')) exit(0);
 
 // Available icons
 $supported_browser_icons = array('Android','Anonymouse','Baiduspider','BlackBerry','BingBot','CFNetwork','Chrome','Chromium','Default Browser','Exabot/BiggerBetter','FacebookExternalHit','FeedBurner','Feedfetcher-Google','Firefox','Internet Archive','Googlebot','Google Bot','Google Feedfetcher','Google Web Preview','IE','IEMobile','iPad','iPhone','iPod Touch','Maxthon','Mediapartners-Google','Microsoft-WebDAV','msnbot','Mozilla','NewsGatorOnline','Netscape','Nokia','Opera','Opera Mini','Opera Mobi','Python','PycURL','Safari','W3C_Validator','WordPress','Yahoo! Slurp','YandexBot');
-$supported_os_icons = array('android','blackberry os','iphone osx','ios','java','linux','macosx','symbianos','win7','win8','win8.1','winphone7','winvista','winxp','unknown');
+$supported_os_icons = array('android','blackberry os','iphone osx','ios','java','linux','macosx','symbianos','win7','win8','win8.1','winnt','winphone7','winvista','winxp','unknown');
 $supported_browser_types = array(__('Human','wp-slimstat'),__('Bot/Crawler','wp-slimstat'),__('Mobile Device','wp-slimstat'),__('Syndication Reader','wp-slimstat'));
 
 $plugin_url = plugins_url('', dirname(__FILE__));
@@ -44,7 +44,7 @@ else if (wp_slimstat::$options['async_load'] != 'yes' || !empty($_POST['report_i
 			if ($gethostbyaddr != $host_by_ip && !empty($gethostbyaddr)) $host_by_ip .= ', '.$gethostbyaddr;
 		}
 		
-		$results[$i]['dt'] = date_i18n(wp_slimstat::$options['date_time_format'], $results[$i]['dt'], true);
+		$results[$i]['dt'] = date_i18n(wp_slimstat::$options['date_format'].' '.wp_slimstat::$options['time_format'], $results[$i]['dt'], true);
 
 		// Print session header?
 		if ($i == 0 || $results[$i-1]['visit_id'] != $results[$i]['visit_id'] || ($results[$i]['visit_id'] == 0 && ($results[$i-1]['ip'] != $results[$i]['ip'] || $results[$i-1]['browser'] != $results[$i]['browser'] || $results[$i-1]['platform'] != $results[$i]['platform']))){
@@ -65,11 +65,11 @@ else if (wp_slimstat::$options['async_load'] != 'yes' || !empty($_POST['report_i
 			$browser_filtered = "<a class='slimstat-filter-link inline-icon' href='".wp_slimstat_reports::fs_url('browser equals '.$results[$i]['browser'])."'><img class='slimstat-tooltip-trigger' src='$browser_icon' width='16' height='16'/><span class='slimstat-tooltip-content'>$browser_title</span></a>";
 
 			// Platform
-			$platform_icon = $plugin_url."/images/browsers/other-browsers-and-os.png' title='".__($results[$i]['platform'],'wp-slimstat')."' width='16' height='16'/>";
+			$platform_icon = $plugin_url."/images/browsers/other-browsers-and-os.png";
 			if (in_array(strtolower($results[$i]['platform']), $supported_os_icons)){
 				$platform_icon = $plugin_url.'/images/platforms/'.sanitize_title($results[$i]['platform']).'.png';
 			}
-			$platform_filtered = "<a class='slimstat-filter-link inline-icon' href='".wp_slimstat_reports::fs_url('platform equals '.$results[$i]['platform'])."'><img class='slimstat-tooltip-trigger' src='$platform_icon' width='16' height='16'/><span class='slimstat-tooltip-content'>".__($results[$i]['platform'],'wp-slimstat')."</span></a>";
+			$platform_filtered = "<a class='slimstat-filter-link inline-icon' href='".wp_slimstat_reports::fs_url('platform equals '.$results[$i]['platform'])."'><img class='slimstat-tooltip-trigger' src='$platform_icon' title='".__($results[$i]['platform'],'wp-slimstat')."' width='16' height='16'/><span class='slimstat-tooltip-content'>".__($results[$i]['platform'],'wp-slimstat')."</span></a>";
 
 			// Browser Type
 			$browser_type_filtered = '';

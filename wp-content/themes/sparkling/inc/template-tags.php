@@ -23,6 +23,7 @@ function sparkling_paging_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'sparkling' ); ?></h1>
 		<div class="nav-links">
 
+			<?php /*
 			<?php if ( get_next_posts_link() ) : ?>
 			<div class="nav-previous"> <?php next_posts_link( __( '<i class="fa fa-chevron-left"></i> Older posts', 'sparkling' ) ); ?></div>
 			<?php endif; ?>
@@ -30,7 +31,8 @@ function sparkling_paging_nav() {
 			<?php if ( get_previous_posts_link() ) : ?>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <i class="fa fa-chevron-right"></i>', 'sparkling' ) ); ?> </div>
 			<?php endif; ?>
-
+			 */?>
+			<?php wp_pagenavi();?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
