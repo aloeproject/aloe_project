@@ -116,7 +116,7 @@ wp_embed_register_handler( 'youku',
 function zh_cn_l10n_patch_admin_screens_style_enqueue_stylesheet() {
 	wp_register_style( 'zh-cn-l10n-administration-screens',
 		content_url( ( WP_DEBUG ? '/languages/zh_CN-administration-screens.dev.css' : '/languages/zh_CN-administration-screens.css' ) ),
-		array( 'wp-admin' ),
+                array( /* 'wp-admin' -- breaks media grid in upload.php */ ),
 		'20111120');
 	wp_enqueue_style( 'zh-cn-l10n-administration-screens' );
 }

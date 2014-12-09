@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WordPress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress 4.0\n"
+"Project-Id-Version: WordPress 4.0.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
-"POT-Creation-Date: 2014-09-04 18:12:27+00:00\n"
-"PO-Revision-Date: 2014-09-05 00:03-0000\n"
+"POT-Creation-Date: 2014-11-20 20:14:54+00:00\n"
+"PO-Revision-Date: 2014-11-21 03:19-0000\n"
 "Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
 "Language-Team: WordPress China\n"
 "Language: zh_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: wp-admin/about.php:19
 msgid "About"
@@ -50,11 +50,31 @@ msgstr "鸣谢"
 msgid "Freedoms"
 msgstr "您的自由"
 
-#: wp-admin/about.php:57
+#: wp-admin/about.php:45 wp-admin/about.php:183
+msgid "Maintenance and Security Release"
+msgid_plural "Maintenance and Security Releases"
+msgstr[0] "维护和安全更新"
+
+#. translators: 1: WordPress version number, 2: plural number of bugs. More
+#. than one security issue.
+#: wp-admin/about.php:46 wp-admin/about.php:198
+msgid ""
+"<strong>Version %1$s</strong> addressed some security issues and fixed %2$s "
+"bug."
+msgid_plural ""
+"<strong>Version %1$s</strong> addressed some security issues and fixed %2$s "
+"bugs."
+msgstr[0] "<strong>%1$s 版本</strong>修补了安全漏洞、修正了 %2$s 个问题。"
+
+#: wp-admin/about.php:48 wp-admin/about.php:201
+msgid "For more information, see <a href=\"%s\">the release notes</a>."
+msgstr "欲了解更多，参见<a href=\"%s\">发行注记</a>。"
+
+#: wp-admin/about.php:65
 msgid "Manage your media with style"
 msgstr "优雅地管理媒体"
 
-#: wp-admin/about.php:58
+#: wp-admin/about.php:66
 msgid ""
 "Explore your uploads in a beautiful, endless grid. A new details preview "
 "makes viewing and editing any amount of media in sequence a snap."
@@ -62,11 +82,11 @@ msgstr ""
 "在美丽、无尽的网格中浏览您上传的文件。无论您想查看或编辑多少文件，新的详情预"
 "览都能使这一过程无比迅捷。"
 
-#: wp-admin/about.php:84
+#: wp-admin/about.php:92
 msgid "Working with embeds has never been easier"
 msgstr "管理嵌入现在前所未有地简单"
 
-#: wp-admin/about.php:85
+#: wp-admin/about.php:93
 msgid ""
 "Paste in a YouTube URL on a new line, and watch it magically become an "
 "embedded video. Now try it with a tweet. Oh yeah &#8212; embedding has "
@@ -77,7 +97,7 @@ msgstr ""
 "试。是的——嵌入现在变成了视觉体验。编辑器现在能够显示嵌入内容的真实预览，为您"
 "节约时间，也给您自信。"
 
-#: wp-admin/about.php:86
+#: wp-admin/about.php:94
 msgid ""
 "We&#8217;ve expanded the services supported by default, too &#8212; you can "
 "embed videos from CollegeHumor, playlists from YouTube, and talks from TED. "
@@ -88,11 +108,11 @@ msgstr ""
 "YouTube的播放列表和来自TED的演讲。<a href=\"http://codex.wordpress.org/Embeds"
 "\">查阅所有WordPress支持的嵌入</a>。"
 
-#: wp-admin/about.php:94
+#: wp-admin/about.php:102
 msgid "Focus on your content"
 msgstr "专注于您的内容"
 
-#: wp-admin/about.php:95
+#: wp-admin/about.php:103
 msgid ""
 "Writing and editing is smoother and more immersive with an editor that "
 "expands to fit your content as you write, and keeps the formatting tools "
@@ -101,11 +121,11 @@ msgstr ""
 "写作和编辑现在变得更顺滑、更身临其境。随着您的写作，编辑器将会自动扩展来适应"
 "您的内容，并保证格式工具总是可用。"
 
-#: wp-admin/about.php:121
+#: wp-admin/about.php:129
 msgid "Finding the right plugin"
 msgstr "寻找正确的插件"
 
-#: wp-admin/about.php:122
+#: wp-admin/about.php:130
 msgid ""
 "There are more than 30,000 free and open source plugins in the WordPress "
 "plugin directory. WordPress 4.0 makes it easier to find the right one for "
@@ -116,110 +136,90 @@ msgstr ""
 "入新的条件、改善的搜索器和更可视化的浏览体验使找到符合您需要的插件变得更简"
 "单。"
 
-#: wp-admin/about.php:123
+#: wp-admin/about.php:131
 msgid "Browse plugins"
 msgstr "浏览插件"
 
-#: wp-admin/about.php:131
+#: wp-admin/about.php:139
 msgid "Under the Hood"
 msgstr "引擎盖下"
 
-#: wp-admin/about.php:135
+#: wp-admin/about.php:143
 msgid "Customizer API"
 msgstr "自定义API"
 
-#: wp-admin/about.php:136
+#: wp-admin/about.php:144
 msgid ""
 "Contexts, panels, and a wider array of controls are now supported in the "
 "customizer."
 msgstr "上下文、面板和许多新的控制工具现已在编辑器中可用。"
 
-#: wp-admin/about.php:139
+#: wp-admin/about.php:147
 msgid "Query Ordering"
 msgstr "查询顺序"
 
 #. translators: 1: "ORDER BY" (SQL), 2: "WP_Query"
-#: wp-admin/about.php:142
+#: wp-admin/about.php:150
 msgid "Developers have more flexibility creating %1$s clauses through %2$s."
 msgstr "开发者在%2$s中书写%1$s语句将有更多灵活性。"
 
-#: wp-admin/about.php:146 wp-admin/credits.php:191
+#: wp-admin/about.php:154 wp-admin/credits.php:191
 msgid "External Libraries"
 msgstr "外部库"
 
-#: wp-admin/about.php:147
+#: wp-admin/about.php:155
 msgid ""
 "Updated libraries: TinyMCE&nbsp;4.1.3, jQuery&nbsp;1.11.1, "
 "MediaElement&nbsp;2.15."
 msgstr ""
 "新的外部库：TinyMCE&nbsp;4.1.3、jQuery&nbsp;1.11.1、MediaElement&nbsp;2.15。"
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:164
 msgid "Return to Updates"
 msgstr "返回“更新”"
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:164
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "返回“仪表盘” &rarr; “更新”"
 
-#: wp-admin/about.php:160
+#: wp-admin/about.php:168
 msgid "Go to Dashboard &rarr; Home"
 msgstr "前往“仪表盘” &rarr; “首页”"
 
-#: wp-admin/about.php:160
+#: wp-admin/about.php:168
 msgid "Go to Dashboard"
 msgstr "前往“仪表盘”"
 
-#: wp-admin/about.php:173
+#: wp-admin/about.php:181
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "维护更新"
 
-#: wp-admin/about.php:174
+#: wp-admin/about.php:182
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "安全更新"
 
-#: wp-admin/about.php:175
-msgid "Maintenance and Security Release"
-msgid_plural "Maintenance and Security Releases"
-msgstr[0] "维护和安全更新"
-
 #. translators: 1: WordPress version number.
-#: wp-admin/about.php:178
+#: wp-admin/about.php:186
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>%1$s 版本</strong>修补了安全漏洞。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:182
+#: wp-admin/about.php:190
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>%1$s 版本</strong>修复了 %2$s 个问题。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:186
+#: wp-admin/about.php:194
 msgid ""
 "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural ""
 "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s 版本</strong>修补了安全漏洞、修正了 %2$s 个问题。"
-
-#. translators: 1: WordPress version number, 2: plural number of bugs. More
-#. than one security issue.
-#: wp-admin/about.php:190
-msgid ""
-"<strong>Version %1$s</strong> addressed some security issues and fixed %2$s "
-"bug."
-msgid_plural ""
-"<strong>Version %1$s</strong> addressed some security issues and fixed %2$s "
-"bugs."
-msgstr[0] "<strong>%1$s 版本</strong>修补了安全漏洞、修正了 %2$s 个问题。"
-
-#: wp-admin/about.php:193
-msgid "For more information, see <a href=\"%s\">the release notes</a>."
-msgstr "欲了解更多，参见<a href=\"%s\">发行注记</a>。"
 
 #: wp-admin/admin-footer.php:29
 msgid "Thank you for creating with <a href=\"%s\">WordPress</a>."
@@ -263,7 +263,7 @@ msgid "Unknown post type."
 msgstr "文章类型未知。"
 
 #: wp-admin/async-upload.php:56 wp-admin/edit-tags.php:247
-#: wp-admin/includes/post.php:1645 wp-admin/post.php:154
+#: wp-admin/includes/post.php:1651 wp-admin/post.php:154
 msgid "You are not allowed to edit this item."
 msgstr "您无权编辑此项目。"
 
@@ -292,7 +292,7 @@ msgstr "编辑评论"
 #: wp-admin/options-general.php:73 wp-admin/options-media.php:28
 #: wp-admin/options-permalink.php:20 wp-admin/options-reading.php:55
 #: wp-admin/options-writing.php:20 wp-admin/plugin-editor.php:128
-#: wp-admin/plugin-install.php:50 wp-admin/plugins.php:344
+#: wp-admin/plugin-install.php:69 wp-admin/plugins.php:344
 #: wp-admin/revision.php:114 wp-admin/theme-editor.php:25
 #: wp-admin/theme-install.php:87 wp-admin/themes.php:49
 #: wp-admin/update-core.php:470 wp-admin/upload.php:33 wp-admin/upload.php:198
@@ -326,7 +326,7 @@ msgstr "您也可以使用状态栏来审核评论、修改发布时间。"
 #: wp-admin/options-discussion.php:25 wp-admin/options-general.php:78
 #: wp-admin/options-media.php:33 wp-admin/options-permalink.php:43
 #: wp-admin/options-reading.php:70 wp-admin/options-writing.php:50
-#: wp-admin/plugin-editor.php:139 wp-admin/plugin-install.php:65
+#: wp-admin/plugin-editor.php:139 wp-admin/plugin-install.php:84
 #: wp-admin/plugins.php:358 wp-admin/revision.php:118
 #: wp-admin/theme-editor.php:38 wp-admin/theme-install.php:102
 #: wp-admin/themes.php:84 wp-admin/tools.php:27 wp-admin/update-core.php:488
@@ -354,7 +354,7 @@ msgstr ""
 #: wp-admin/options-discussion.php:27 wp-admin/options-general.php:80
 #: wp-admin/options-media.php:35 wp-admin/options-permalink.php:46
 #: wp-admin/options-reading.php:72 wp-admin/options-writing.php:52
-#: wp-admin/plugin-editor.php:142 wp-admin/plugin-install.php:67
+#: wp-admin/plugin-editor.php:142 wp-admin/plugin-install.php:86
 #: wp-admin/plugins.php:360 wp-admin/revision.php:120
 #: wp-admin/theme-editor.php:43 wp-admin/theme-install.php:104
 #: wp-admin/themes.php:86 wp-admin/tools.php:29 wp-admin/update-core.php:490
@@ -372,7 +372,7 @@ msgid "Oops, no comment with this ID."
 msgstr "啊，这个ID不对应任何评论。"
 
 #: wp-admin/comment.php:68 wp-admin/comment.php:221
-#: wp-admin/includes/post.php:1382
+#: wp-admin/includes/post.php:1388
 msgid "Go back"
 msgstr "返回"
 
@@ -2559,7 +2559,7 @@ msgid "You are not allowed to edit this page."
 msgstr "您没有修改这个页面的权限。"
 
 #: wp-admin/includes/ajax-actions.php:1505 wp-admin/includes/post.php:205
-#: wp-admin/includes/post.php:1580 wp-admin/includes/post.php:1584
+#: wp-admin/includes/post.php:1586 wp-admin/includes/post.php:1590
 #: wp-admin/press-this.php:33 wp-admin/upload.php:110
 msgid "You are not allowed to edit this post."
 msgstr "您没有修改这篇文章的权限。"
@@ -2594,7 +2594,7 @@ msgid "Scheduled"
 msgstr "定时"
 
 #: wp-admin/includes/ajax-actions.php:2623
-#: wp-admin/includes/plugin-install.php:448
+#: wp-admin/includes/plugin-install.php:453
 msgid "(based on %s rating)"
 msgid_plural "(based on %s ratings)"
 msgstr[0] "（基于%s次评价）"
@@ -3056,9 +3056,9 @@ msgid "%s from now"
 msgstr "%s之后"
 
 #: wp-admin/includes/class-wp-media-list-table.php:398
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:461
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:463
 #: wp-admin/includes/class-wp-posts-list-table.php:734
-#: wp-admin/includes/plugin-install.php:429 wp-admin/includes/revision.php:173
+#: wp-admin/includes/plugin-install.php:434 wp-admin/includes/revision.php:173
 msgid "%s ago"
 msgstr "%s前"
 
@@ -3286,7 +3286,7 @@ msgid "Broken Theme:"
 msgstr "损坏的主题："
 
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:387
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:380
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:382
 #: wp-admin/includes/class-wp-plugins-list-table.php:519
 #: wp-admin/includes/class-wp-theme-install-list-table.php:272
 #: wp-admin/includes/class-wp-theme-install-list-table.php:374
@@ -3367,7 +3367,7 @@ msgid "Beta Testing"
 msgstr "Beta测试"
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:74
-#: wp-admin/plugin-install.php:85 wp-admin/update.php:134
+#: wp-admin/plugin-install.php:104 wp-admin/update.php:134
 msgid "Upload Plugin"
 msgstr "上传插件"
 
@@ -3381,82 +3381,82 @@ msgstr "重试"
 msgid "No plugins match your request."
 msgstr "没有符合要求的插件。"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:336
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:338
 msgctxt "Plugin installer group title"
 msgid "Performance"
 msgstr "性能"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:337
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:339
 msgctxt "Plugin installer group title"
 msgid "Social"
 msgstr "社交"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:338
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:340
 msgctxt "Plugin installer group title"
 msgid "Tools"
 msgstr "工具"
 
 #. translators: 1: Plugin name and version.
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:392
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:394
 msgid "Install %s now"
 msgstr "现在安装%s"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:392
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:394
 #: wp-admin/includes/class-wp-theme-install-list-table.php:249
 #: wp-admin/includes/plugin-install.php:203
-#: wp-admin/includes/plugin-install.php:523
+#: wp-admin/includes/plugin-install.php:528
 #: wp-admin/includes/theme-install.php:143
 msgid "Install Now"
 msgstr "现在安装"
 
 #. translators: 1: Plugin name and version
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:399
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:401
 msgid "Update %s now"
 msgstr "现在更新%s"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:399
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:401
 #: wp-admin/update-core.php:40
 msgid "Update Now"
 msgstr "现在更新"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:405
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:407
 msgid "This plugin is already installed and is up to date"
 msgstr "当前安装的已经是该插件的最新版本"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:405
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:407
 msgctxt "plugin"
 msgid "Installed"
 msgstr "已安装"
 
 #. translators: 1: Plugin name and version.
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:414
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:416
 #: wp-admin/includes/class-wp-plugins-list-table.php:527
 msgid "More information about %s"
 msgstr "关于%s的更多信息"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:414
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:416
 msgid "More Details"
 msgstr "更多详情"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:460
-#: wp-admin/includes/plugin-install.php:428
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:462
+#: wp-admin/includes/plugin-install.php:433
 msgid "Last Updated:"
 msgstr "最近更新："
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:465
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:467
 msgid "%s download"
 msgid_plural "%s downloads"
 msgstr[0] "%s次下载"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:470
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:472
 msgid "<strong>Untested</strong> with your version of WordPress"
 msgstr "该插件<strong>尚未测试</strong>与您当前使用的WordPress版本的兼容性。"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:472
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:474
 msgid "<strong>Incompatible</strong> with your version of WordPress"
 msgstr "该插件<strong>不兼容</strong>于您当前使用的WordPress版本。"
 
-#: wp-admin/includes/class-wp-plugin-install-list-table.php:474
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:476
 msgid "<strong>Compatible</strong> with your version of WordPress"
 msgstr "该插件<strong>兼容</strong>于您当前使用的WordPress版本。"
 
@@ -3790,7 +3790,7 @@ msgid "Install"
 msgstr "安装"
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:381
-#: wp-admin/includes/plugin-install.php:424
+#: wp-admin/includes/plugin-install.php:429
 msgid "Version:"
 msgstr "版本："
 
@@ -6100,7 +6100,7 @@ msgstr "管理界面配色方案"
 msgid "%s has taken over and is currently editing."
 msgstr "%s已接管并正在编辑。"
 
-#: wp-admin/includes/misc.php:816 wp-admin/includes/post.php:1639
+#: wp-admin/includes/misc.php:816 wp-admin/includes/post.php:1645
 #: wp-admin/widgets.php:306
 msgid "Error while saving."
 msgstr "保存时发生错误。"
@@ -6486,102 +6486,102 @@ msgstr "您的WordPress.org用户名："
 msgid "Get Favorites"
 msgstr "获取收藏列表"
 
-#: wp-admin/includes/plugin-install.php:345
+#: wp-admin/includes/plugin-install.php:350
 msgctxt "Plugin installer section title"
 msgid "Description"
 msgstr "描述"
 
-#: wp-admin/includes/plugin-install.php:346
+#: wp-admin/includes/plugin-install.php:351
 msgctxt "Plugin installer section title"
 msgid "Installation"
 msgstr "安装"
 
-#: wp-admin/includes/plugin-install.php:347
+#: wp-admin/includes/plugin-install.php:352
 msgctxt "Plugin installer section title"
 msgid "FAQ"
 msgstr "常见问题"
 
-#: wp-admin/includes/plugin-install.php:348
+#: wp-admin/includes/plugin-install.php:353
 msgctxt "Plugin installer section title"
 msgid "Screenshots"
 msgstr "截图"
 
-#: wp-admin/includes/plugin-install.php:349
+#: wp-admin/includes/plugin-install.php:354
 msgctxt "Plugin installer section title"
 msgid "Changelog"
 msgstr "修订历史"
 
-#: wp-admin/includes/plugin-install.php:350
+#: wp-admin/includes/plugin-install.php:355
 msgctxt "Plugin installer section title"
 msgid "Reviews"
 msgstr "评价"
 
-#: wp-admin/includes/plugin-install.php:351
+#: wp-admin/includes/plugin-install.php:356
 msgctxt "Plugin installer section title"
 msgid "Other Notes"
 msgstr "其它备注"
 
-#: wp-admin/includes/plugin-install.php:373 wp-admin/update.php:106
+#: wp-admin/includes/plugin-install.php:378 wp-admin/update.php:106
 msgid "Plugin Install"
 msgstr "插件安装"
 
-#: wp-admin/includes/plugin-install.php:426
+#: wp-admin/includes/plugin-install.php:431
 msgid "Author:"
 msgstr "作者："
 
-#: wp-admin/includes/plugin-install.php:432
+#: wp-admin/includes/plugin-install.php:437
 msgid "Requires WordPress Version:"
 msgstr "需要WordPress版本："
 
-#: wp-admin/includes/plugin-install.php:432
+#: wp-admin/includes/plugin-install.php:437
 msgid "%s or higher"
 msgstr "%s或更高"
 
-#: wp-admin/includes/plugin-install.php:434
+#: wp-admin/includes/plugin-install.php:439
 msgid "Compatible up to:"
 msgstr "兼容至："
 
-#: wp-admin/includes/plugin-install.php:436
+#: wp-admin/includes/plugin-install.php:441
 msgid "Downloaded:"
 msgstr "下载量："
 
-#: wp-admin/includes/plugin-install.php:436
+#: wp-admin/includes/plugin-install.php:441
 msgid "%s time"
 msgid_plural "%s times"
 msgstr[0] "%s次"
 
-#: wp-admin/includes/plugin-install.php:438
+#: wp-admin/includes/plugin-install.php:443
 msgid "WordPress.org Plugin Page &#187;"
 msgstr "WordPress.org插件页面 &#187;"
 
-#: wp-admin/includes/plugin-install.php:440
+#: wp-admin/includes/plugin-install.php:445
 msgid "Plugin Homepage &#187;"
 msgstr "插件主页 &#187;"
 
-#: wp-admin/includes/plugin-install.php:442
-#: wp-admin/includes/plugin-install.php:490
+#: wp-admin/includes/plugin-install.php:447
+#: wp-admin/includes/plugin-install.php:495
 msgid "Donate to this plugin &#187;"
 msgstr "捐助该插件 &#187;"
 
-#: wp-admin/includes/plugin-install.php:446
+#: wp-admin/includes/plugin-install.php:451
 msgid "Average Rating"
 msgstr "综合评级"
 
-#: wp-admin/includes/plugin-install.php:458
+#: wp-admin/includes/plugin-install.php:463
 msgid "Click to see reviews that provided a rating of %d star"
 msgid_plural "Click to see reviews that provided a rating of %d stars"
 msgstr[0] "点此来查阅给出了%s星的评论"
 
-#: wp-admin/includes/plugin-install.php:459
+#: wp-admin/includes/plugin-install.php:464
 msgid "%d star"
 msgid_plural "%d stars"
 msgstr[0] "%d星"
 
-#: wp-admin/includes/plugin-install.php:470
+#: wp-admin/includes/plugin-install.php:475
 msgid "Contributors"
 msgstr "贡献者"
 
-#: wp-admin/includes/plugin-install.php:497
+#: wp-admin/includes/plugin-install.php:502
 msgid ""
 "<strong>Warning:</strong> This plugin has <strong>not been tested</strong> "
 "with your current version of WordPress."
@@ -6589,7 +6589,7 @@ msgstr ""
 "<strong>警告：</strong>目前<strong>尚未测试</strong>该插件与您当前使用的"
 "WordPress版本的兼容性。"
 
-#: wp-admin/includes/plugin-install.php:499
+#: wp-admin/includes/plugin-install.php:504
 msgid ""
 "<strong>Warning:</strong> This plugin has <strong>not been marked as "
 "compatible</strong> with your version of WordPress."
@@ -6597,15 +6597,15 @@ msgstr ""
 "<strong>警告：</strong>该插件<strong>还未被标记为</strong>“与您当前使用的"
 "WordPress版本兼容”。"
 
-#: wp-admin/includes/plugin-install.php:528
+#: wp-admin/includes/plugin-install.php:533
 msgid "Install Update Now"
 msgstr "现在安装更新"
 
-#: wp-admin/includes/plugin-install.php:532
+#: wp-admin/includes/plugin-install.php:537
 msgid "Newer Version (%s) Installed"
 msgstr "新版本（%s）已安装"
 
-#: wp-admin/includes/plugin-install.php:535
+#: wp-admin/includes/plugin-install.php:540
 msgid "Latest Version Installed"
 msgstr "已安装最新版本"
 
@@ -6725,7 +6725,7 @@ msgstr "点击编辑这部分固定链接"
 msgid "Temporary permalink. Click to edit this part."
 msgstr "临时固定链接，点击可更改这部分。"
 
-#: wp-admin/includes/post.php:1203 wp-admin/includes/post.php:1219
+#: wp-admin/includes/post.php:1203 wp-admin/includes/post.php:1225
 msgid "Permalink:"
 msgstr "固定链接："
 
@@ -6733,27 +6733,27 @@ msgstr "固定链接："
 msgid "Change Permalinks"
 msgstr "更改固定链接"
 
-#: wp-admin/includes/post.php:1280
+#: wp-admin/includes/post.php:1286
 msgid "Remove featured image"
 msgstr "移除特色图像"
 
-#: wp-admin/includes/post.php:1436
+#: wp-admin/includes/post.php:1442
 msgid "This content is currently locked."
 msgstr "此内容当前被锁定。"
 
-#: wp-admin/includes/post.php:1438
+#: wp-admin/includes/post.php:1444
 msgid "If you take over, %s will be blocked from continuing to edit."
 msgstr "如果您接手，%s将不能继续编辑。"
 
-#: wp-admin/includes/post.php:1461
+#: wp-admin/includes/post.php:1467
 msgid "Take over"
 msgstr "接管"
 
-#: wp-admin/includes/post.php:1475
+#: wp-admin/includes/post.php:1481
 msgid "Saving revision..."
 msgstr "保存修订版本…"
 
-#: wp-admin/includes/post.php:1476
+#: wp-admin/includes/post.php:1482
 msgid "Your latest changes were saved as a revision."
 msgstr "您最近的更改已保存为修订版本。"
 
@@ -10118,11 +10118,11 @@ msgstr ""
 msgid "You do not have sufficient permissions to install plugins on this site."
 msgstr "您无权在本站点安装插件。"
 
-#: wp-admin/plugin-install.php:29
+#: wp-admin/plugin-install.php:48
 msgid "Add Plugins"
 msgstr "添加插件"
 
-#: wp-admin/plugin-install.php:52
+#: wp-admin/plugin-install.php:71
 msgid ""
 "Plugins hook into WordPress to extend its functionality with custom "
 "features. Plugins are developed independently from the core WordPress "
@@ -10137,11 +10137,11 @@ msgstr ""
 "\"_blank\">WordPress.org插件目录</a>中的插件都与WordPress所用的许可证相兼容。"
 "您现在就可以在您站点仪表盘的“插件”区域搜索和浏览目录中的插件。"
 
-#: wp-admin/plugin-install.php:56
+#: wp-admin/plugin-install.php:75
 msgid "Adding Plugins"
 msgstr "插件的添加"
 
-#: wp-admin/plugin-install.php:58
+#: wp-admin/plugin-install.php:77
 msgid ""
 "If you know what you&#8217;re looking for, Search is your best bet. The "
 "Search screen has options to search the WordPress.org Plugin Directory for a "
@@ -10153,7 +10153,7 @@ msgstr ""
 "或插件标签在WordPress插件目录搜索。您也可以通过“热门标签”来浏览插件目录。标签"
 "字体越大，说明使用该标签的插件越多。"
 
-#: wp-admin/plugin-install.php:59
+#: wp-admin/plugin-install.php:78
 msgid ""
 "If you just want to get an idea of what&#8217;s available, you can browse "
 "Featured and Popular plugins by using the links in the upper left of the "
@@ -10162,7 +10162,7 @@ msgstr ""
 "若您只想知道有什么插件可以选择，您可从页面左上角的“特色”、“热门”中浏览。这些"
 "内容定期更新。"
 
-#: wp-admin/plugin-install.php:60
+#: wp-admin/plugin-install.php:79
 msgid ""
 "You can also browse a user&#8217;s favorite plugins, by using the Favorites "
 "link in the upper left of the screen and entering their WordPress.org "
@@ -10170,7 +10170,7 @@ msgid ""
 msgstr ""
 "您也可以浏览他人收藏的插件。点击页面左上的“收藏”链接，然后输入一个用户名。"
 
-#: wp-admin/plugin-install.php:61
+#: wp-admin/plugin-install.php:80
 msgid ""
 "If you want to install a plugin that you&#8217;ve downloaded elsewhere, "
 "click the Upload link in the upper left. You will be prompted to upload the ."
@@ -10179,7 +10179,7 @@ msgstr ""
 "如果您想安装从别处下载的插件，请点击左上角的“上传”。WordPress接受.zip格式的压"
 "缩包，在上传成功后，您可启用该插件。"
 
-#: wp-admin/plugin-install.php:66
+#: wp-admin/plugin-install.php:85
 msgid ""
 "<a href=\"http://codex.wordpress.org/Plugins_Add_New_Screen\" target=\"_blank"
 "\">Documentation on Installing Plugins</a>"
@@ -10188,7 +10188,7 @@ msgstr ""
 "%89%E8%A3%85%E6%8F%92%E4%BB%B6%E9%A1%B5%E9%9D%A2\" target=\"_blank\">关于安装"
 "插件的中文文档</a>"
 
-#: wp-admin/plugin-install.php:82
+#: wp-admin/plugin-install.php:101
 msgctxt "plugins"
 msgid "Browse"
 msgstr "查阅"

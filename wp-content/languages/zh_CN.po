@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WordPress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress 4.0\n"
+"Project-Id-Version: WordPress 4.0.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
-"POT-Creation-Date: 2014-09-04 18:11:39+00:00\n"
-"PO-Revision-Date: 2014-09-04 23:34-0000\n"
+"POT-Creation-Date: 2014-11-20 20:12:38+00:00\n"
+"PO-Revision-Date: 2014-11-21 03:19-0000\n"
 "Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
 "Language-Team: WordPress China\n"
 "Language: zh_CN\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: wp-activate.php:73
 msgid "Activation Key Required"
@@ -136,7 +136,7 @@ msgstr "http://codex.wordpress.org/zh-cn:Main_Page"
 msgid "Support Forums"
 msgstr "支持论坛"
 
-#: wp-includes/admin-bar.php:146 wp-login.php:771
+#: wp-includes/admin-bar.php:146 wp-login.php:775
 msgid "https://wordpress.org/support/"
 msgstr "http://zh-cn.forums.wordpress.org/"
 
@@ -275,7 +275,7 @@ msgid "Header"
 msgstr "顶部"
 
 #: wp-includes/admin-bar.php:730 wp-includes/class-wp-editor.php:1398
-#: wp-includes/media.php:2904
+#: wp-includes/media.php:2913
 msgid "Search"
 msgstr "搜索"
 
@@ -485,10 +485,10 @@ msgstr "上传"
 
 #: wp-includes/class-wp-customize-control.php:591
 #: wp-includes/class-wp-customize-widgets.php:726
-#: wp-includes/media-template.php:452 wp-includes/media-template.php:1004
-#: wp-includes/media-template.php:1018 wp-includes/media-template.php:1088
-#: wp-includes/media-template.php:1100 wp-includes/media-template.php:1121
-#: wp-includes/media-template.php:1153 wp-includes/media.php:2909
+#: wp-includes/media-template.php:454 wp-includes/media-template.php:1006
+#: wp-includes/media-template.php:1020 wp-includes/media-template.php:1090
+#: wp-includes/media-template.php:1102 wp-includes/media-template.php:1123
+#: wp-includes/media-template.php:1155 wp-includes/media.php:2918
 msgid "Remove"
 msgstr "移除"
 
@@ -685,20 +685,20 @@ msgid "Background Position"
 msgstr "背景位置"
 
 #: wp-includes/class-wp-customize-manager.php:1070
-#: wp-includes/class-wp-editor.php:906 wp-includes/media-template.php:598
-#: wp-includes/media-template.php:804 wp-includes/media-template.php:870
+#: wp-includes/class-wp-editor.php:906 wp-includes/media-template.php:600
+#: wp-includes/media-template.php:806 wp-includes/media-template.php:872
 msgid "Left"
 msgstr "左"
 
 #: wp-includes/class-wp-customize-manager.php:1071
-#: wp-includes/class-wp-editor.php:907 wp-includes/media-template.php:601
-#: wp-includes/media-template.php:807 wp-includes/media-template.php:873
+#: wp-includes/class-wp-editor.php:907 wp-includes/media-template.php:603
+#: wp-includes/media-template.php:809 wp-includes/media-template.php:875
 msgid "Center"
 msgstr "中"
 
 #: wp-includes/class-wp-customize-manager.php:1072
-#: wp-includes/class-wp-editor.php:908 wp-includes/media-template.php:604
-#: wp-includes/media-template.php:810 wp-includes/media-template.php:876
+#: wp-includes/class-wp-editor.php:908 wp-includes/media-template.php:606
+#: wp-includes/media-template.php:812 wp-includes/media-template.php:878
 msgid "Right"
 msgstr "右"
 
@@ -799,7 +799,7 @@ msgctxt "Move widget"
 msgid "Move"
 msgstr "移动"
 
-#: wp-includes/class-wp-customize-widgets.php:724 wp-includes/media.php:2946
+#: wp-includes/class-wp-customize-widgets.php:724 wp-includes/media.php:2955
 msgid "Apply"
 msgstr "应用"
 
@@ -1023,7 +1023,7 @@ msgid "OK"
 msgstr "确定"
 
 #: wp-includes/class-wp-editor.php:787 wp-includes/class-wp-editor.php:1423
-#: wp-includes/media.php:2906 wp-includes/script-loader.php:388
+#: wp-includes/media.php:2915 wp-includes/script-loader.php:388
 #: wp-includes/script-loader.php:439
 msgid "Cancel"
 msgstr "取消"
@@ -1115,8 +1115,8 @@ msgid "Robots"
 msgstr "机器人"
 
 #: wp-includes/class-wp-editor.php:811 wp-includes/class-wp-editor.php:1388
-#: wp-includes/media-template.php:365 wp-includes/media-template.php:542
-#: wp-includes/media-template.php:773 wp-includes/revision.php:29
+#: wp-includes/media-template.php:365 wp-includes/media-template.php:544
+#: wp-includes/media-template.php:775 wp-includes/revision.php:29
 msgid "Title"
 msgstr "标题"
 
@@ -1129,7 +1129,7 @@ msgid "Encoding"
 msgstr "编码"
 
 #: wp-includes/class-wp-editor.php:814 wp-includes/media-template.php:390
-#: wp-includes/media-template.php:567
+#: wp-includes/media-template.php:569
 msgid "Description"
 msgstr "图像描述"
 
@@ -1456,21 +1456,21 @@ msgstr "合并单元格"
 msgid "Split table cell"
 msgstr "拆分单元格"
 
-#: wp-includes/class-wp-editor.php:902 wp-includes/media-template.php:918
+#: wp-includes/class-wp-editor.php:902 wp-includes/media-template.php:920
 msgid "Height"
 msgstr "高度"
 
-#: wp-includes/class-wp-editor.php:903 wp-includes/media-template.php:918
+#: wp-includes/class-wp-editor.php:903 wp-includes/media-template.php:920
 msgid "Width"
 msgstr "宽度"
 
 #: wp-includes/class-wp-editor.php:904 wp-includes/media-template.php:380
-#: wp-includes/media-template.php:557 wp-includes/media-template.php:790
-#: wp-includes/media-template.php:855
+#: wp-includes/media-template.php:559 wp-includes/media-template.php:792
+#: wp-includes/media-template.php:857
 msgid "Caption"
 msgstr "说明"
 
-#: wp-includes/class-wp-editor.php:905 wp-includes/media-template.php:590
+#: wp-includes/class-wp-editor.php:905 wp-includes/media-template.php:592
 msgid "Alignment"
 msgstr "对齐方式"
 
@@ -1629,7 +1629,7 @@ msgstr "阅读更多…"
 msgid "Distraction Free Writing"
 msgstr "全屏写作模式"
 
-#: wp-includes/class-wp-editor.php:1188 wp-includes/media.php:2907
+#: wp-includes/class-wp-editor.php:1188 wp-includes/media.php:2916
 #: wp-includes/script-loader.php:358 wp-includes/script-loader.php:449
 msgid "Update"
 msgstr "更新"
@@ -1679,7 +1679,7 @@ msgid "Updated."
 msgstr "已更新。"
 
 #: wp-includes/class-wp-editor.php:1253 wp-includes/media-template.php:324
-#: wp-includes/media-template.php:483
+#: wp-includes/media-template.php:485
 msgid "Saved."
 msgstr "已保存。"
 
@@ -1704,11 +1704,11 @@ msgid "Enter the destination URL"
 msgstr "输入目标URL"
 
 #: wp-includes/class-wp-editor.php:1385 wp-includes/media-template.php:360
-#: wp-includes/media-template.php:537 wp-includes/media.php:2902
+#: wp-includes/media-template.php:539 wp-includes/media.php:2911
 msgid "URL"
 msgstr "URL"
 
-#: wp-includes/class-wp-editor.php:1391 wp-includes/media-template.php:961
+#: wp-includes/class-wp-editor.php:1391 wp-includes/media-template.php:963
 msgid "Open link in a new window/tab"
 msgstr "在新窗口或标签页打开链接"
 
@@ -2523,7 +2523,7 @@ msgid "Pingback:"
 msgstr "Pingback："
 
 #: wp-includes/comment-template.php:1774 wp-includes/comment-template.php:1860
-#: wp-includes/media-template.php:576
+#: wp-includes/media-template.php:578
 msgid "Edit"
 msgstr "编辑"
 
@@ -2962,11 +2962,11 @@ msgstr "选择菜单："
 msgid "new WordPress Loop"
 msgstr "新的WordPress Loop机制"
 
-#: wp-includes/deprecated.php:707 wp-includes/media-template.php:607
-#: wp-includes/media-template.php:653 wp-includes/media-template.php:712
-#: wp-includes/media-template.php:813 wp-includes/media-template.php:828
-#: wp-includes/media-template.php:879 wp-includes/media-template.php:941
-#: wp-includes/media-template.php:1039 wp-includes/media-template.php:1129
+#: wp-includes/deprecated.php:707 wp-includes/media-template.php:609
+#: wp-includes/media-template.php:655 wp-includes/media-template.php:714
+#: wp-includes/media-template.php:815 wp-includes/media-template.php:830
+#: wp-includes/media-template.php:881 wp-includes/media-template.php:943
+#: wp-includes/media-template.php:1041 wp-includes/media-template.php:1131
 #: wp-includes/script-loader.php:315
 msgid "None"
 msgstr "无"
@@ -3032,7 +3032,7 @@ msgid "Protected Comments: Please enter your password to view comments."
 msgstr "评论受保护：要查看请输入密码。"
 
 #. translators: opening curly double quote
-#: wp-includes/formatting.php:62 wp-includes/formatting.php:3842
+#: wp-includes/formatting.php:62 wp-includes/formatting.php:3855
 msgctxt "opening curly double quote"
 msgid "&#8220;"
 msgstr "&#8220;"
@@ -3086,37 +3086,37 @@ msgid "&#8212;"
 msgstr "&#8212;"
 
 #. translators: min=minute
-#: wp-includes/formatting.php:2472
+#: wp-includes/formatting.php:2485
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] "%s分钟"
 
-#: wp-includes/formatting.php:2477
+#: wp-includes/formatting.php:2490
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s小时"
 
-#: wp-includes/formatting.php:2482
+#: wp-includes/formatting.php:2495
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s天"
 
-#: wp-includes/formatting.php:2487
+#: wp-includes/formatting.php:2500
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s周"
 
-#: wp-includes/formatting.php:2492
+#: wp-includes/formatting.php:2505
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s月"
 
-#: wp-includes/formatting.php:2497
+#: wp-includes/formatting.php:2510
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s年"
 
-#: wp-includes/formatting.php:2584 wp-includes/general-template.php:2547
+#: wp-includes/formatting.php:2597 wp-includes/general-template.php:2547
 msgid "&hellip;"
 msgstr "&hellip;"
 
@@ -3128,46 +3128,46 @@ msgstr "&hellip;"
 #. characters),
 #. enter 'characters'. Otherwise, enter 'words'. Do not translate into
 #. your own language.
-#: wp-includes/formatting.php:2589 wp-includes/script-loader.php:370
+#: wp-includes/formatting.php:2602 wp-includes/script-loader.php:370
 msgctxt "word count: words or characters?"
 msgid "words"
 msgstr "characters"
 
-#: wp-includes/formatting.php:3261
+#: wp-includes/formatting.php:3274
 msgid ""
 "The email address entered did not appear to be a valid email address. Please "
 "enter a valid email address."
 msgstr "看起来您输入的电子邮件地址无效。请输入正确的电子邮件地址。"
 
-#: wp-includes/formatting.php:3348
+#: wp-includes/formatting.php:3361
 msgid ""
 "The WordPress address you entered did not appear to be a valid URL. Please "
 "enter a valid URL."
 msgstr "您输入的WordPress地址可能有误。请输入一个正确的URL。"
 
-#: wp-includes/formatting.php:3358
+#: wp-includes/formatting.php:3371
 msgid ""
 "The Site address you entered did not appear to be a valid URL. Please enter "
 "a valid URL."
 msgstr "您输入的站点地址可能有误。请输入正确的URL。"
 
-#: wp-includes/formatting.php:3403
+#: wp-includes/formatting.php:3416
 msgid ""
 "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "您输入的时区无效。请选择有效的时区。"
 
 #. translators: used to join items in a list with more than 2 items
-#: wp-includes/formatting.php:3602
+#: wp-includes/formatting.php:3615
 msgid "%s, %s"
 msgstr "%s、%s"
 
 #. translators: used to join last two items in a list with more than 2 times
-#: wp-includes/formatting.php:3604
+#: wp-includes/formatting.php:3617
 msgid "%s, and %s"
 msgstr "%s和%s"
 
 #. translators: used to join items in a list with only 2 items
-#: wp-includes/formatting.php:3606
+#: wp-includes/formatting.php:3619
 msgid "%s and %s"
 msgstr "%s和%s"
 
@@ -3211,7 +3211,7 @@ msgstr "您正试图注销%s"
 msgid "Do you really want to <a href='%s'>log out</a>?"
 msgstr "您真的希望<a href='%s'>登出</a>？"
 
-#: wp-includes/functions.php:2324 wp-includes/ms-functions.php:1912
+#: wp-includes/functions.php:2324 wp-includes/ms-functions.php:1914
 msgid "Please try again."
 msgstr "请重试。"
 
@@ -3340,8 +3340,8 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "搜索"
 
-#: wp-includes/general-template.php:284 wp-login.php:545 wp-login.php:605
-#: wp-login.php:647 wp-login.php:729
+#: wp-includes/general-template.php:284 wp-login.php:545 wp-login.php:608
+#: wp-login.php:651 wp-login.php:733
 msgid "Log in"
 msgstr "登录"
 
@@ -3349,24 +3349,24 @@ msgstr "登录"
 msgid "Log out"
 msgstr "登出"
 
-#: wp-includes/general-template.php:405 wp-login.php:707 wp-login.php:867
+#: wp-includes/general-template.php:405 wp-login.php:711 wp-login.php:871
 msgid "Username"
 msgstr "用户名"
 
-#: wp-includes/general-template.php:406 wp-login.php:871
+#: wp-includes/general-template.php:406 wp-login.php:875
 msgid "Password"
 msgstr "密码"
 
-#: wp-includes/general-template.php:407 wp-login.php:882
+#: wp-includes/general-template.php:407 wp-login.php:886
 msgid "Remember Me"
 msgstr "记住我的登录信息"
 
-#: wp-includes/general-template.php:408 wp-login.php:858 wp-login.php:884
+#: wp-includes/general-template.php:408 wp-login.php:862 wp-login.php:888
 msgid "Log In"
 msgstr "登录"
 
-#: wp-includes/general-template.php:540 wp-login.php:548 wp-login.php:650
-#: wp-login.php:725 wp-login.php:901
+#: wp-includes/general-template.php:540 wp-login.php:548 wp-login.php:654
+#: wp-login.php:729 wp-login.php:905
 msgid "Register"
 msgstr "注册"
 
@@ -3394,7 +3394,7 @@ msgid "Page not found"
 msgstr "未找到页面"
 
 #. translators: 1: month name, 2: 4-digit year
-#: wp-includes/general-template.php:1274 wp-includes/media.php:2848
+#: wp-includes/general-template.php:1274 wp-includes/media.php:2857
 msgid "%1$s %2$d"
 msgstr "%2$d年%1$s"
 
@@ -3595,44 +3595,44 @@ msgstr "更窄"
 msgid "Default width"
 msgstr "默认宽度"
 
-#: wp-includes/link-template.php:671
+#: wp-includes/link-template.php:673
 msgid "Comments Feed"
 msgstr "评论Feed"
 
-#: wp-includes/link-template.php:948 wp-includes/link-template.php:1214
-#: wp-includes/link-template.php:1316 wp-includes/link-template.php:1377
+#: wp-includes/link-template.php:950 wp-includes/link-template.php:1216
+#: wp-includes/link-template.php:1318 wp-includes/link-template.php:1379
 msgid "Edit This"
 msgstr "编辑"
 
-#: wp-includes/link-template.php:1489
+#: wp-includes/link-template.php:1491
 msgid "Use commas instead of %s to separate excluded terms."
 msgstr "请使用英文逗号（，）来分隔多个排除项目。请不要使用“%s”。"
 
-#: wp-includes/link-template.php:1609 wp-includes/link-template.php:1841
+#: wp-includes/link-template.php:1611 wp-includes/link-template.php:1843
 msgid "Previous Post"
 msgstr "上一篇文章"
 
-#: wp-includes/link-template.php:1609 wp-includes/link-template.php:1841
+#: wp-includes/link-template.php:1611 wp-includes/link-template.php:1843
 msgid "Next Post"
 msgstr "下一篇文章"
 
-#: wp-includes/link-template.php:2029 wp-includes/link-template.php:2152
+#: wp-includes/link-template.php:2031 wp-includes/link-template.php:2154
 msgid "Next Page &raquo;"
 msgstr "下一页 &raquo;"
 
-#: wp-includes/link-template.php:2108 wp-includes/link-template.php:2151
+#: wp-includes/link-template.php:2110 wp-includes/link-template.php:2153
 msgid "&laquo; Previous Page"
 msgstr "&laquo; 上一页"
 
-#: wp-includes/link-template.php:2260
+#: wp-includes/link-template.php:2262
 msgid "Newer Comments &raquo;"
 msgstr "较新评论 &raquo;"
 
-#: wp-includes/link-template.php:2304
+#: wp-includes/link-template.php:2306
 msgid "&laquo; Older Comments"
 msgstr "&laquo; 先前评论"
 
-#: wp-includes/link-template.php:3116
+#: wp-includes/link-template.php:3118
 msgid "This is the short link."
 msgstr "这是短链接。"
 
@@ -3985,7 +3985,7 @@ msgstr "选择文件"
 msgid "Maximum upload file size: %s."
 msgstr "最大上传文件大小：%s。"
 
-#: wp-includes/media-template.php:223 wp-includes/media.php:2984
+#: wp-includes/media-template.php:223 wp-includes/media.php:2993
 msgid "Suggested image dimensions:"
 msgstr "推荐的图像尺寸："
 
@@ -4017,8 +4017,8 @@ msgstr "编辑上一媒体项目"
 msgid "Edit next media item"
 msgstr "编辑下一媒体项目"
 
-#: wp-includes/media-template.php:316 wp-includes/media-template.php:507
-#: wp-includes/media.php:2975
+#: wp-includes/media-template.php:316 wp-includes/media-template.php:509
+#: wp-includes/media.php:2984
 msgid "Edit Image"
 msgstr "编辑图像"
 
@@ -4042,7 +4042,7 @@ msgstr "文件大小："
 msgid "Dimensions:"
 msgstr "分辨率："
 
-#: wp-includes/media-template.php:339 wp-includes/media-template.php:513
+#: wp-includes/media-template.php:339 wp-includes/media-template.php:515
 msgid "Length:"
 msgstr "长度："
 
@@ -4050,18 +4050,18 @@ msgstr "长度："
 msgid "Bitrate:"
 msgstr "比特率："
 
-#: wp-includes/media-template.php:370 wp-includes/media-template.php:547
-#: wp-includes/media.php:1458
+#: wp-includes/media-template.php:370 wp-includes/media-template.php:549
+#: wp-includes/media.php:1462
 msgid "Artist"
 msgstr "艺术家"
 
-#: wp-includes/media-template.php:371 wp-includes/media-template.php:548
-#: wp-includes/media.php:1459
+#: wp-includes/media-template.php:371 wp-includes/media-template.php:550
+#: wp-includes/media.php:1463
 msgid "Album"
 msgstr "相册"
 
-#: wp-includes/media-template.php:385 wp-includes/media-template.php:562
-#: wp-includes/media-template.php:796
+#: wp-includes/media-template.php:385 wp-includes/media-template.php:564
+#: wp-includes/media-template.php:798
 msgid "Alt Text"
 msgstr "替代文本"
 
@@ -4077,280 +4077,280 @@ msgstr "上传至"
 msgid "View attachment page"
 msgstr "查看附件页面"
 
-#: wp-includes/media-template.php:412
+#: wp-includes/media-template.php:413
 msgid "Edit more details"
 msgstr "编辑详细信息"
 
-#: wp-includes/media-template.php:416 wp-includes/media-template.php:519
+#: wp-includes/media-template.php:418 wp-includes/media-template.php:521
 msgid "Untrash"
 msgstr "还原"
 
-#: wp-includes/media-template.php:418 wp-includes/media-template.php:521
-#: wp-includes/media.php:2935
+#: wp-includes/media-template.php:420 wp-includes/media-template.php:523
+#: wp-includes/media.php:2944
 msgid "Trash"
 msgstr "回收站"
 
-#: wp-includes/media-template.php:421 wp-includes/media-template.php:524
-#: wp-includes/media.php:2945
+#: wp-includes/media-template.php:423 wp-includes/media-template.php:526
+#: wp-includes/media.php:2954
 msgid "Delete Permanently"
 msgstr "永久删除"
 
-#: wp-includes/media-template.php:456
+#: wp-includes/media-template.php:458
 msgid "Deselect"
 msgstr "取消选择"
 
-#: wp-includes/media-template.php:463
+#: wp-includes/media-template.php:465
 msgid "Caption this image&hellip;"
 msgstr "描述此图&hellip;"
 
-#: wp-includes/media-template.php:467
+#: wp-includes/media-template.php:469
 msgid "Describe this video&hellip;"
 msgstr "描述此视频&hellip;"
 
-#: wp-includes/media-template.php:469
+#: wp-includes/media-template.php:471
 msgid "Describe this audio file&hellip;"
 msgstr "描述此音频&hellip;"
 
-#: wp-includes/media-template.php:471
+#: wp-includes/media-template.php:473
 msgid "Describe this media file&hellip;"
 msgstr "描述此文件&hellip;"
 
-#: wp-includes/media-template.php:479 wp-includes/media.php:2952
+#: wp-includes/media-template.php:481 wp-includes/media.php:2961
 msgid "Attachment Details"
 msgstr "附件详情"
 
-#: wp-includes/media-template.php:508
+#: wp-includes/media-template.php:510
 msgid "Refresh"
 msgstr "刷新"
 
-#: wp-includes/media-template.php:579 wp-includes/script-loader.php:505
+#: wp-includes/media-template.php:581 wp-includes/script-loader.php:505
 msgid "Clear"
 msgstr "清空"
 
-#: wp-includes/media-template.php:586
+#: wp-includes/media-template.php:588
 msgid "Attachment Display Settings"
 msgstr "附件显示设置"
 
-#: wp-includes/media-template.php:616
+#: wp-includes/media-template.php:618
 msgid "Embed or Link"
 msgstr "嵌入或链接"
 
-#: wp-includes/media-template.php:618 wp-includes/media-template.php:696
-#: wp-includes/media-template.php:819 wp-includes/media-template.php:923
+#: wp-includes/media-template.php:620 wp-includes/media-template.php:698
+#: wp-includes/media-template.php:821 wp-includes/media-template.php:925
 msgid "Link To"
 msgstr "链接到"
 
-#: wp-includes/media-template.php:629
+#: wp-includes/media-template.php:631
 msgid "Embed Media Player"
 msgstr "内嵌媒体播放器"
 
-#: wp-includes/media-template.php:636
+#: wp-includes/media-template.php:638
 msgid "Link to Media File"
 msgstr "链接到媒体文件"
 
-#: wp-includes/media-template.php:638 wp-includes/media-template.php:709
-#: wp-includes/media-template.php:927
+#: wp-includes/media-template.php:640 wp-includes/media-template.php:711
+#: wp-includes/media-template.php:929
 msgid "Media File"
 msgstr "媒体文件"
 
-#: wp-includes/media-template.php:643
+#: wp-includes/media-template.php:645
 msgid "Link to Attachment Page"
 msgstr "链接到附件页面"
 
-#: wp-includes/media-template.php:645 wp-includes/media-template.php:706
-#: wp-includes/media-template.php:930
+#: wp-includes/media-template.php:647 wp-includes/media-template.php:708
+#: wp-includes/media-template.php:932
 msgid "Attachment Page"
 msgstr "附件页面"
 
-#: wp-includes/media-template.php:650 wp-includes/media-template.php:825
-#: wp-includes/media-template.php:938
+#: wp-includes/media-template.php:652 wp-includes/media-template.php:827
+#: wp-includes/media-template.php:940
 msgid "Custom URL"
 msgstr "自定义URL"
 
-#: wp-includes/media-template.php:663 wp-includes/media-template.php:887
+#: wp-includes/media-template.php:665 wp-includes/media-template.php:889
 msgid "Size"
 msgstr "尺寸"
 
-#: wp-includes/media-template.php:672 wp-includes/media-template.php:896
-#: wp-includes/media.php:2674
+#: wp-includes/media-template.php:674 wp-includes/media-template.php:898
+#: wp-includes/media.php:2683
 msgid "Thumbnail"
 msgstr "缩略图"
 
-#: wp-includes/media-template.php:673 wp-includes/media-template.php:897
-#: wp-includes/media.php:2675
+#: wp-includes/media-template.php:675 wp-includes/media-template.php:899
+#: wp-includes/media.php:2684
 msgid "Medium"
 msgstr "中等"
 
-#: wp-includes/media-template.php:674 wp-includes/media-template.php:898
-#: wp-includes/media.php:2676
+#: wp-includes/media-template.php:676 wp-includes/media-template.php:900
+#: wp-includes/media.php:2685
 msgid "Large"
 msgstr "大"
 
-#: wp-includes/media-template.php:675 wp-includes/media-template.php:899
-#: wp-includes/media.php:2677
+#: wp-includes/media-template.php:677 wp-includes/media-template.php:901
+#: wp-includes/media.php:2686
 msgid "Full Size"
 msgstr "完整尺寸"
 
-#: wp-includes/media-template.php:693
+#: wp-includes/media-template.php:695
 msgid "Gallery Settings"
 msgstr "相册设置"
 
-#: wp-includes/media-template.php:718
+#: wp-includes/media-template.php:720
 msgid "Columns"
 msgstr "栏目"
 
-#: wp-includes/media-template.php:732
+#: wp-includes/media-template.php:734
 msgid "Random Order"
 msgstr "随机顺序"
 
-#: wp-includes/media-template.php:738
+#: wp-includes/media-template.php:740
 msgid "Playlist Settings"
 msgstr "播放列表设置"
 
-#: wp-includes/media-template.php:748
+#: wp-includes/media-template.php:750
 msgid "Show Video List"
 msgstr "显示视频列表"
 
-#: wp-includes/media-template.php:750
+#: wp-includes/media-template.php:752
 msgid "Show Tracklist"
 msgstr "显示曲目列表"
 
-#: wp-includes/media-template.php:759
+#: wp-includes/media-template.php:761
 msgid "Show Artist Name in Tracklist"
 msgstr "在曲目列表中显示艺术家名"
 
-#: wp-includes/media-template.php:767
+#: wp-includes/media-template.php:769
 msgid "Show Images"
 msgstr "显示图像"
 
-#: wp-includes/media-template.php:801 wp-includes/media-template.php:867
+#: wp-includes/media-template.php:803 wp-includes/media-template.php:869
 msgid "Align"
 msgstr "对齐"
 
-#: wp-includes/media-template.php:822 wp-includes/media-template.php:934
+#: wp-includes/media-template.php:824 wp-includes/media-template.php:936
 msgid "Image URL"
 msgstr "图像URL"
 
-#: wp-includes/media-template.php:844
+#: wp-includes/media-template.php:846
 msgid "Edit Original"
 msgstr "编辑原始文件"
 
-#: wp-includes/media-template.php:845 wp-includes/media.php:2908
+#: wp-includes/media-template.php:847 wp-includes/media.php:2917
 msgid "Replace"
 msgstr "替换"
 
-#: wp-includes/media-template.php:861
+#: wp-includes/media-template.php:863
 msgid "Alternative Text"
 msgstr "替代文本"
 
-#: wp-includes/media-template.php:865
+#: wp-includes/media-template.php:867
 msgid "Display Settings"
 msgstr "显示设置"
 
-#: wp-includes/media-template.php:912
+#: wp-includes/media-template.php:914
 msgid "Custom Size"
 msgstr "自定义尺寸"
 
-#: wp-includes/media-template.php:947
+#: wp-includes/media-template.php:949
 msgid "Advanced Options"
 msgstr "高级选项"
 
-#: wp-includes/media-template.php:951
+#: wp-includes/media-template.php:953
 msgid "Image Title Attribute"
 msgstr "图像标题属性"
 
-#: wp-includes/media-template.php:955
+#: wp-includes/media-template.php:957
 msgid "Image CSS Class"
 msgstr "图像CSS类"
 
-#: wp-includes/media-template.php:964
+#: wp-includes/media-template.php:966
 msgid "Link Rel"
 msgstr "链接Rel"
 
-#: wp-includes/media-template.php:968
+#: wp-includes/media-template.php:970
 msgid "Link CSS Class"
 msgstr "链接CSS类"
 
-#: wp-includes/media-template.php:1025 wp-includes/media-template.php:1108
+#: wp-includes/media-template.php:1027 wp-includes/media-template.php:1110
 msgid "Add alternate sources for maximum HTML5 playback:"
 msgstr "为了增强HTML5播放体验，请添加备用源："
 
-#: wp-includes/media-template.php:1035 wp-includes/media-template.php:1125
+#: wp-includes/media-template.php:1037 wp-includes/media-template.php:1127
 msgid "Preload"
 msgstr "预加载"
 
-#: wp-includes/media-template.php:1037 wp-includes/media-template.php:1127
+#: wp-includes/media-template.php:1039 wp-includes/media-template.php:1129
 msgctxt "auto preload"
 msgid "Auto"
 msgstr "自动"
 
-#: wp-includes/media-template.php:1038 wp-includes/media-template.php:1128
+#: wp-includes/media-template.php:1040 wp-includes/media-template.php:1130
 msgid "Metadata"
 msgstr "元数据"
 
-#: wp-includes/media-template.php:1045 wp-includes/media-template.php:1135
+#: wp-includes/media-template.php:1047 wp-includes/media-template.php:1137
 msgid "Autoplay"
 msgstr "自动播放"
 
-#: wp-includes/media-template.php:1050 wp-includes/media-template.php:1140
+#: wp-includes/media-template.php:1052 wp-includes/media-template.php:1142
 msgid "Loop"
 msgstr "循环"
 
-#: wp-includes/media-template.php:1119
+#: wp-includes/media-template.php:1121
 msgid "Poster Image"
 msgstr "海报图像"
 
-#: wp-includes/media-template.php:1144
+#: wp-includes/media-template.php:1146
 msgid "Tracks (subtitles, captions, descriptions, chapters, or metadata)"
 msgstr "曲目（字幕、说明、描述、章节或元数据）"
 
-#: wp-includes/media-template.php:1157
+#: wp-includes/media-template.php:1159
 msgid "There are no associated subtitles."
 msgstr "没有关联的字幕。"
 
-#: wp-includes/media-template.php:1190 wp-includes/media.php:2932
+#: wp-includes/media-template.php:1192 wp-includes/media.php:2941
 msgid "No items found."
 msgstr "找不到条目。"
 
-#: wp-includes/media.php:1463
+#: wp-includes/media.php:1467
 msgid "Genre"
 msgstr "流派"
 
-#: wp-includes/media.php:1464
+#: wp-includes/media.php:1468
 msgid "Year"
 msgstr "年"
 
-#: wp-includes/media.php:1465
+#: wp-includes/media.php:1469
 msgctxt "video or audio"
 msgid "Length"
 msgstr "长度"
 
-#: wp-includes/media.php:1467
+#: wp-includes/media.php:1471
 msgid "Bitrate"
 msgstr "比特率"
 
-#: wp-includes/media.php:1468
+#: wp-includes/media.php:1472
 msgid "Bitrate Mode"
 msgstr "比特率模式"
 
-#: wp-includes/media.php:2458
+#: wp-includes/media.php:2462
 msgid "No editor could be selected."
 msgstr "无可选编辑器。"
 
-#: wp-includes/media.php:2650 wp-includes/script-loader.php:360
+#: wp-includes/media.php:2659 wp-includes/script-loader.php:360
 #: wp-includes/script-loader.php:483
 msgid "(no title)"
 msgstr "(无标题)"
 
-#: wp-includes/media.php:2903
+#: wp-includes/media.php:2912
 msgid "Add Media"
 msgstr "添加媒体"
 
-#: wp-includes/media.php:2905
+#: wp-includes/media.php:2914
 msgid "Select"
 msgstr "选择"
 
-#: wp-includes/media.php:2910
+#: wp-includes/media.php:2919
 msgid "Back"
 msgstr "返回"
 
@@ -4359,79 +4359,79 @@ msgstr "返回"
 #. with the
 #. lack of plural support here, turn it into "selected: %d" then translate
 #. it.
-#: wp-includes/media.php:2915
+#: wp-includes/media.php:2924
 msgid "%d selected"
 msgstr "已选%d个"
 
-#: wp-includes/media.php:2916
+#: wp-includes/media.php:2925
 msgid "Drag and drop to reorder images."
 msgstr "拖放来排序图像。"
 
-#: wp-includes/media.php:2919
+#: wp-includes/media.php:2928
 msgid "Upload Files"
 msgstr "上传文件"
 
-#: wp-includes/media.php:2920
+#: wp-includes/media.php:2929
 msgid "Upload Images"
 msgstr "上传文件"
 
-#: wp-includes/media.php:2923
+#: wp-includes/media.php:2932
 msgid "Media Library"
 msgstr "媒体库"
 
-#: wp-includes/media.php:2924
+#: wp-includes/media.php:2933
 msgid "Insert Media"
 msgstr "插入多媒体"
 
-#: wp-includes/media.php:2925
+#: wp-includes/media.php:2934
 msgid "Create a new gallery"
 msgstr "创建新相册"
 
-#: wp-includes/media.php:2926
+#: wp-includes/media.php:2935
 msgid "Create a new playlist"
 msgstr "创建新的播放列表"
 
-#: wp-includes/media.php:2927
+#: wp-includes/media.php:2936
 msgid "Create a new video playlist"
 msgstr "创建新的视频播放列表"
 
-#: wp-includes/media.php:2928
+#: wp-includes/media.php:2937
 msgid "&#8592; Return to library"
 msgstr "&#8592; 回到媒体库"
 
-#: wp-includes/media.php:2929
+#: wp-includes/media.php:2938
 msgid "All media items"
 msgstr "所有多媒体项目"
 
-#: wp-includes/media.php:2930
+#: wp-includes/media.php:2939
 msgid "All media types"
 msgstr "所有媒体类型"
 
-#: wp-includes/media.php:2931
+#: wp-includes/media.php:2940
 msgid "All dates"
 msgstr "全部日期"
 
-#: wp-includes/media.php:2933
+#: wp-includes/media.php:2942
 msgid "Insert into page"
 msgstr "插入至页面"
 
-#: wp-includes/media.php:2933
+#: wp-includes/media.php:2942
 msgid "Insert into post"
 msgstr "插入至文章"
 
-#: wp-includes/media.php:2934
+#: wp-includes/media.php:2943
 msgid "Unattached"
 msgstr "尚未附加"
 
-#: wp-includes/media.php:2936
+#: wp-includes/media.php:2945
 msgid "Uploaded to this page"
 msgstr "上传到本页面的"
 
-#: wp-includes/media.php:2936
+#: wp-includes/media.php:2945
 msgid "Uploaded to this post"
 msgstr "上传到本文章的"
 
-#: wp-includes/media.php:2937
+#: wp-includes/media.php:2946
 msgid ""
 "You are about to permanently delete this item.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -4439,7 +4439,7 @@ msgstr ""
 "您将永久删除所选条目。\n"
 "点击“取消”停止，点击“确定”删除。"
 
-#: wp-includes/media.php:2938
+#: wp-includes/media.php:2947
 msgid ""
 "You are about to permanently delete these items.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -4447,7 +4447,7 @@ msgstr ""
 "您将永久删除这些项目。\n"
 "点击“取消”停止，点击“确定”删除。"
 
-#: wp-includes/media.php:2939
+#: wp-includes/media.php:2948
 msgid ""
 "You are about to trash these items.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -4455,224 +4455,224 @@ msgstr ""
 "您将删除这些项目。\n"
 "点击“取消”停止，点击“确定”删除。"
 
-#: wp-includes/media.php:2940
+#: wp-includes/media.php:2949
 msgid "Bulk Select"
 msgstr "批量选择"
 
-#: wp-includes/media.php:2941
+#: wp-includes/media.php:2950
 msgid "Cancel Selection"
 msgstr "取消选择"
 
-#: wp-includes/media.php:2942
+#: wp-includes/media.php:2951
 msgid "Trash Selected"
 msgstr "删除所选"
 
-#: wp-includes/media.php:2943
+#: wp-includes/media.php:2952
 msgid "Untrash Selected"
 msgstr "还原所选"
 
-#: wp-includes/media.php:2944
+#: wp-includes/media.php:2953
 msgid "Delete Selected"
 msgstr "永久删除所选"
 
-#: wp-includes/media.php:2947
+#: wp-includes/media.php:2956
 msgid "Filter by date"
 msgstr "按日期筛选"
 
-#: wp-includes/media.php:2948
+#: wp-includes/media.php:2957
 msgid "Filter by type"
 msgstr "按类型筛选"
 
-#: wp-includes/media.php:2949
+#: wp-includes/media.php:2958
 msgid "Search Media"
 msgstr "搜索媒体"
 
-#: wp-includes/media.php:2955
+#: wp-includes/media.php:2964
 msgid "Insert from URL"
 msgstr "从URL插入"
 
-#: wp-includes/media.php:2958
+#: wp-includes/media.php:2967
 msgid "Set Featured Image"
 msgstr "设为特色图像"
 
-#: wp-includes/media.php:2959
+#: wp-includes/media.php:2968
 msgid "Set featured image"
 msgstr "设为特色图像"
 
-#: wp-includes/media.php:2962
+#: wp-includes/media.php:2971
 msgid "Create Gallery"
 msgstr "创建相册"
 
-#: wp-includes/media.php:2963
+#: wp-includes/media.php:2972
 msgid "Edit Gallery"
 msgstr "编辑相册"
 
-#: wp-includes/media.php:2964
+#: wp-includes/media.php:2973
 msgid "&#8592; Cancel Gallery"
 msgstr "&#8592; 取消相册"
 
-#: wp-includes/media.php:2965
+#: wp-includes/media.php:2974
 msgid "Insert gallery"
 msgstr "插入相册"
 
-#: wp-includes/media.php:2966
+#: wp-includes/media.php:2975
 msgid "Update gallery"
 msgstr "更新相册"
 
-#: wp-includes/media.php:2967
+#: wp-includes/media.php:2976
 msgid "Add to gallery"
 msgstr "添加至相册"
 
-#: wp-includes/media.php:2968
+#: wp-includes/media.php:2977
 msgid "Add to Gallery"
 msgstr "添加至相册"
 
-#: wp-includes/media.php:2969
+#: wp-includes/media.php:2978
 msgid "Reverse order"
 msgstr "反转顺序"
 
-#: wp-includes/media.php:2972
+#: wp-includes/media.php:2981
 msgid "Image Details"
 msgstr "图像详情"
 
-#: wp-includes/media.php:2973
+#: wp-includes/media.php:2982
 msgid "Replace Image"
 msgstr "替换图像"
 
-#: wp-includes/media.php:2974 wp-includes/media.php:2991
-#: wp-includes/media.php:2997
+#: wp-includes/media.php:2983 wp-includes/media.php:3000
+#: wp-includes/media.php:3006
 msgid "Cancel Edit"
 msgstr "取消编辑"
 
-#: wp-includes/media.php:2978
+#: wp-includes/media.php:2987
 msgid "Choose Image"
 msgstr "选择图像"
 
-#: wp-includes/media.php:2979
+#: wp-includes/media.php:2988
 msgid "Select and Crop"
 msgstr "选择并裁剪"
 
-#: wp-includes/media.php:2980
+#: wp-includes/media.php:2989
 msgid "Skip Cropping"
 msgstr "跳过裁剪"
 
-#: wp-includes/media.php:2981
+#: wp-includes/media.php:2990
 msgid "Crop Image"
 msgstr "裁剪图像"
 
-#: wp-includes/media.php:2982
+#: wp-includes/media.php:2991
 msgid "Crop your image"
 msgstr "裁剪您的图片"
 
-#: wp-includes/media.php:2983
+#: wp-includes/media.php:2992
 msgid "Cropping&hellip;"
 msgstr "裁剪中&hellip;"
 
-#: wp-includes/media.php:2985
+#: wp-includes/media.php:2994
 msgid "There has been an error cropping your image."
 msgstr "在裁剪您的图像时发生了错误。"
 
-#: wp-includes/media.php:2988
+#: wp-includes/media.php:2997
 msgid "Audio Details"
 msgstr "音频详情"
 
-#: wp-includes/media.php:2989
+#: wp-includes/media.php:2998
 msgid "Replace Audio"
 msgstr "替换音频"
 
-#: wp-includes/media.php:2990
+#: wp-includes/media.php:2999
 msgid "Add Audio Source"
 msgstr "添加音频源"
 
-#: wp-includes/media.php:2994
+#: wp-includes/media.php:3003
 msgid "Video Details"
 msgstr "视频详情"
 
-#: wp-includes/media.php:2995
+#: wp-includes/media.php:3004
 msgid "Replace Video"
 msgstr "替换视频"
 
-#: wp-includes/media.php:2996
+#: wp-includes/media.php:3005
 msgid "Add Video Source"
 msgstr "添加视频源"
 
-#: wp-includes/media.php:2998
+#: wp-includes/media.php:3007
 msgid "Select Poster Image"
 msgstr "选择海报图像"
 
-#: wp-includes/media.php:2999
+#: wp-includes/media.php:3008
 msgid "Add Subtitles"
 msgstr "添加字幕"
 
-#: wp-includes/media.php:3002
+#: wp-includes/media.php:3011
 msgid "Drag and drop to reorder tracks."
 msgstr "拖放来排序曲目。"
 
-#: wp-includes/media.php:3003
+#: wp-includes/media.php:3012
 msgid "Create Audio Playlist"
 msgstr "创建音频播放列表"
 
-#: wp-includes/media.php:3004
+#: wp-includes/media.php:3013
 msgid "Edit Audio Playlist"
 msgstr "编辑音频播放列表"
 
-#: wp-includes/media.php:3005
+#: wp-includes/media.php:3014
 msgid "&#8592; Cancel Audio Playlist"
 msgstr "&#8592; 取消音频播放列表"
 
-#: wp-includes/media.php:3006
+#: wp-includes/media.php:3015
 msgid "Insert audio playlist"
 msgstr "插入音频播放列表"
 
-#: wp-includes/media.php:3007
+#: wp-includes/media.php:3016
 msgid "Update audio playlist"
 msgstr "更新音频播放列表"
 
-#: wp-includes/media.php:3008
+#: wp-includes/media.php:3017
 msgid "Add to audio playlist"
 msgstr "添加到音频播放列表"
 
-#: wp-includes/media.php:3009
+#: wp-includes/media.php:3018
 msgid "Add to Audio Playlist"
 msgstr "添加到音频播放列表"
 
-#: wp-includes/media.php:3012
+#: wp-includes/media.php:3021
 msgid "Drag and drop to reorder videos."
 msgstr "拖放来排序视频。"
 
-#: wp-includes/media.php:3013
+#: wp-includes/media.php:3022
 msgid "Create Video Playlist"
 msgstr "创建视频播放列表"
 
-#: wp-includes/media.php:3014
+#: wp-includes/media.php:3023
 msgid "Edit Video Playlist"
 msgstr "编辑视频播放列表"
 
-#: wp-includes/media.php:3015
+#: wp-includes/media.php:3024
 msgid "&#8592; Cancel Video Playlist"
 msgstr "&#8592; 取消视频播放列表"
 
-#: wp-includes/media.php:3016
+#: wp-includes/media.php:3025
 msgid "Insert video playlist"
 msgstr "插入视频播放列表"
 
-#: wp-includes/media.php:3017
+#: wp-includes/media.php:3026
 msgid "Update video playlist"
 msgstr "更新视频播放列表"
 
-#: wp-includes/media.php:3018
+#: wp-includes/media.php:3027
 msgid "Add to video playlist"
 msgstr "添加到视频播放列表"
 
-#: wp-includes/media.php:3019
+#: wp-includes/media.php:3028
 msgid "Add to Video Playlist"
 msgstr "添加到视频播放列表"
 
-#: wp-includes/media.php:3022
+#: wp-includes/media.php:3031
 msgid "Edit Metadata"
 msgstr "编辑元数据"
 
-#: wp-includes/media.php:3023
+#: wp-includes/media.php:3032
 msgid "No media attachments found."
 msgstr "没有找到媒体附件。"
 
@@ -4923,7 +4923,7 @@ msgid ""
 msgstr ""
 "您的WordPress看起来已经安装妥当。如果想重新安装，请删除数据库中的旧数据表。"
 
-#: wp-includes/ms-functions.php:1466
+#: wp-includes/ms-functions.php:1468
 msgid ""
 "Dear User,\n"
 "\n"
@@ -4953,25 +4953,25 @@ msgstr ""
 "\n"
 "--SITE_NAME管理组"
 
-#: wp-includes/ms-functions.php:1523
+#: wp-includes/ms-functions.php:1525
 msgid "New %1$s Site: %2$s"
 msgstr "新%1$s站点：%2$s"
 
-#: wp-includes/ms-functions.php:1601
+#: wp-includes/ms-functions.php:1603
 msgid "New %1$s User: %2$s"
 msgstr "新%1$s用户：%2$s"
 
-#: wp-includes/ms-functions.php:1881
+#: wp-includes/ms-functions.php:1883
 msgid "This file is too big. Files must be less than %d KB in size."
 msgstr "该文件过大，文件应小于%d KB。"
 
-#: wp-includes/ms-functions.php:1965
+#: wp-includes/ms-functions.php:1967
 msgid ""
 "An error occurred adding you to this site. Back to the <a href=\"%s"
 "\">homepage</a>."
 msgstr "将您加入站点时出错。请回<a href=\"%s\">首页</a>。"
 
-#: wp-includes/ms-functions.php:1967
+#: wp-includes/ms-functions.php:1969
 msgid ""
 "You have been added to this site. Please visit the <a href=\"%s\">homepage</"
 "a> or <a href=\"%s\">log in</a> using your username and password."
@@ -4979,11 +4979,11 @@ msgstr ""
 "您已加入该站点。请访问<a href=\"%s\">首页</a>或使用您的用户名和密码<a href="
 "\"%s\">登录</a>。"
 
-#: wp-includes/ms-functions.php:1967
+#: wp-includes/ms-functions.php:1969
 msgid "WordPress &rsaquo; Success"
 msgstr "WordPress &rsaquo; 成功"
 
-#: wp-includes/ms-functions.php:2119
+#: wp-includes/ms-functions.php:2121
 msgid ""
 "Dear User,\n"
 "\n"
@@ -5109,129 +5109,129 @@ msgstr "%s是一项WP的保护选项，因此无法修改"
 msgid "<strong>ERROR</strong>: Invalid username or incorrect password."
 msgstr "<strong>错误</strong>：用户名或密码无效。"
 
-#: wp-includes/pluggable.php:1067
+#: wp-includes/pluggable.php:1073
 msgid ""
 "You should specify a nonce action to be verified by using the first "
 "parameter."
 msgstr "您需在第一个参数指定需要验证的nonce操作。"
 
-#: wp-includes/pluggable.php:1379
+#: wp-includes/pluggable.php:1385
 msgid "New trackback on your post \"%s\""
 msgstr "您的文章《%s》有新trackback回应"
 
 #. translators: 1: website name, 2: author IP, 3: author domain
 #. translators: 1: comment author, 2: author IP, 3: author domain
-#: wp-includes/pluggable.php:1381 wp-includes/pluggable.php:1391
+#: wp-includes/pluggable.php:1387 wp-includes/pluggable.php:1397
 msgid "Website: %1$s (IP: %2$s , %3$s)"
 msgstr "站点：%1$s（IP：%2$s，主机名：%3$s）"
 
-#: wp-includes/pluggable.php:1382 wp-includes/pluggable.php:1392
-#: wp-includes/pluggable.php:1403 wp-includes/pluggable.php:1517
-#: wp-includes/pluggable.php:1524 wp-includes/pluggable.php:1532
+#: wp-includes/pluggable.php:1388 wp-includes/pluggable.php:1398
+#: wp-includes/pluggable.php:1409 wp-includes/pluggable.php:1523
+#: wp-includes/pluggable.php:1530 wp-includes/pluggable.php:1538
 msgid "URL    : %s"
 msgstr "URL：%s"
 
-#: wp-includes/pluggable.php:1383 wp-includes/pluggable.php:1393
+#: wp-includes/pluggable.php:1389 wp-includes/pluggable.php:1399
 msgid "Excerpt: "
 msgstr "摘要："
 
-#: wp-includes/pluggable.php:1384
+#: wp-includes/pluggable.php:1390
 msgid "You can see all trackbacks on this post here: "
 msgstr "在这里您可以看到这篇文章上的全部trackback："
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1386
+#: wp-includes/pluggable.php:1392
 msgid "[%1$s] Trackback: \"%2$s\""
 msgstr "[%1$s] Trackback：“%2$s”"
 
-#: wp-includes/pluggable.php:1389
+#: wp-includes/pluggable.php:1395
 msgid "New pingback on your post \"%s\""
 msgstr "您的文章《%s》有新pingback回应"
 
-#: wp-includes/pluggable.php:1394
+#: wp-includes/pluggable.php:1400
 msgid "You can see all pingbacks on this post here: "
 msgstr "在这里可以看到这篇文章的全部pingback："
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1396
+#: wp-includes/pluggable.php:1402
 msgid "[%1$s] Pingback: \"%2$s\""
 msgstr "[%1$s] Pingback：“%2$s”"
 
-#: wp-includes/pluggable.php:1399
+#: wp-includes/pluggable.php:1405
 msgid "New comment on your post \"%s\""
 msgstr "您的文章《%s》有新评论"
 
 #. translators: 1: comment author, 2: author IP, 3: author domain
-#: wp-includes/pluggable.php:1401 wp-includes/pluggable.php:1530
+#: wp-includes/pluggable.php:1407 wp-includes/pluggable.php:1536
 msgid "Author : %1$s (IP: %2$s , %3$s)"
 msgstr "作者：%1$s（IP：%2$s，主机名：%3$s）"
 
-#: wp-includes/pluggable.php:1402 wp-includes/pluggable.php:1531
+#: wp-includes/pluggable.php:1408 wp-includes/pluggable.php:1537
 msgid "E-mail : %s"
 msgstr "电子邮件：%s"
 
-#: wp-includes/pluggable.php:1404 wp-includes/pluggable.php:1533
+#: wp-includes/pluggable.php:1410 wp-includes/pluggable.php:1539
 msgid "Whois  : http://whois.arin.net/rest/ip/%s"
 msgstr "Whois查询：http://whois.arin.net/rest/ip/%s"
 
-#: wp-includes/pluggable.php:1405 wp-includes/pluggable.php:1534
+#: wp-includes/pluggable.php:1411 wp-includes/pluggable.php:1540
 msgid "Comment: "
 msgstr "评论："
 
-#: wp-includes/pluggable.php:1406
+#: wp-includes/pluggable.php:1412
 msgid "You can see all comments on this post here: "
 msgstr "您可在这里查看这篇文章的所有评论："
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1408
+#: wp-includes/pluggable.php:1414
 msgid "[%1$s] Comment: \"%2$s\""
 msgstr "[%1$s] 评论：“%2$s”"
 
-#: wp-includes/pluggable.php:1412
+#: wp-includes/pluggable.php:1418
 msgid "Permalink: %s"
 msgstr "固定链接：%s"
 
-#: wp-includes/pluggable.php:1416 wp-includes/pluggable.php:1540
+#: wp-includes/pluggable.php:1422 wp-includes/pluggable.php:1546
 msgid "Trash it: %s"
 msgstr "移至回收站：%s"
 
-#: wp-includes/pluggable.php:1418 wp-includes/pluggable.php:1542
+#: wp-includes/pluggable.php:1424 wp-includes/pluggable.php:1548
 msgid "Delete it: %s"
 msgstr "删除：%s"
 
-#: wp-includes/pluggable.php:1419 wp-includes/pluggable.php:1543
+#: wp-includes/pluggable.php:1425 wp-includes/pluggable.php:1549
 msgid "Spam it: %s"
 msgstr "标记为垃圾评论：%s"
 
-#: wp-includes/pluggable.php:1514
+#: wp-includes/pluggable.php:1520
 msgid "A new trackback on the post \"%s\" is waiting for your approval"
 msgstr "在《%s》中有一则新trackback等待您的审核"
 
-#: wp-includes/pluggable.php:1516 wp-includes/pluggable.php:1523
+#: wp-includes/pluggable.php:1522 wp-includes/pluggable.php:1529
 msgid "Website : %1$s (IP: %2$s , %3$s)"
 msgstr "站点：%1$s（IP：%2$s，主机名：%3$s）"
 
-#: wp-includes/pluggable.php:1518
+#: wp-includes/pluggable.php:1524
 msgid "Trackback excerpt: "
 msgstr "Trackback摘要："
 
-#: wp-includes/pluggable.php:1521
+#: wp-includes/pluggable.php:1527
 msgid "A new pingback on the post \"%s\" is waiting for your approval"
 msgstr "在《%s》中有一则新pingback等待您的审核"
 
-#: wp-includes/pluggable.php:1525
+#: wp-includes/pluggable.php:1531
 msgid "Pingback excerpt: "
 msgstr "Pingback摘要："
 
-#: wp-includes/pluggable.php:1528
+#: wp-includes/pluggable.php:1534
 msgid "A new comment on the post \"%s\" is waiting for your approval"
 msgstr "在《%s》中有一条评论等待您的审核"
 
-#: wp-includes/pluggable.php:1538
+#: wp-includes/pluggable.php:1544
 msgid "Approve it: %s"
 msgstr "批准：%s"
 
-#: wp-includes/pluggable.php:1545
+#: wp-includes/pluggable.php:1551
 msgid ""
 "Currently %s comment is waiting for approval. Please visit the moderation "
 "panel:"
@@ -5240,40 +5240,40 @@ msgid_plural ""
 "panel:"
 msgstr[0] "当前有%s条评论等待审核。请移步审核页面来查看："
 
-#: wp-includes/pluggable.php:1549
+#: wp-includes/pluggable.php:1555
 msgid "[%1$s] Please moderate: \"%2$s\""
 msgstr "[%1$s] 请审核：“%2$s”"
 
-#: wp-includes/pluggable.php:1612
+#: wp-includes/pluggable.php:1618
 msgid "Password Lost and Changed for user: %s"
 msgstr "%s的密码丢失并被重新设置"
 
-#: wp-includes/pluggable.php:1616
+#: wp-includes/pluggable.php:1622
 msgid "[%s] Password Lost/Changed"
 msgstr "[%s] 密码丢失/找回"
 
-#: wp-includes/pluggable.php:1639
+#: wp-includes/pluggable.php:1645
 msgid "New user registration on your site %s:"
 msgstr "您的站点%s有新用户注册："
 
-#: wp-includes/pluggable.php:1640 wp-includes/pluggable.php:1648
+#: wp-includes/pluggable.php:1646 wp-includes/pluggable.php:1654
 #: wp-login.php:362
 msgid "Username: %s"
 msgstr "用户名：%s"
 
-#: wp-includes/pluggable.php:1641
+#: wp-includes/pluggable.php:1647
 msgid "E-mail: %s"
 msgstr "电子邮件：%s"
 
-#: wp-includes/pluggable.php:1643
+#: wp-includes/pluggable.php:1649
 msgid "[%s] New User Registration"
 msgstr "[%s] 新用户注册"
 
-#: wp-includes/pluggable.php:1649
+#: wp-includes/pluggable.php:1655
 msgid "Password: %s"
 msgstr "密码：%s"
 
-#: wp-includes/pluggable.php:1652
+#: wp-includes/pluggable.php:1658
 msgid "[%s] Your username and password"
 msgstr "[%s] 您的用户名和密码"
 
@@ -5996,7 +5996,7 @@ msgstr "静音"
 msgid "Captions/Subtitles"
 msgstr "字幕"
 
-#: wp-includes/script-loader.php:339 wp-login.php:628
+#: wp-includes/script-loader.php:339 wp-login.php:631
 msgid "Strength indicator"
 msgstr "强度评估"
 
@@ -6457,7 +6457,7 @@ msgstr ""
 "以<a href=\"%1$s\">%2$s</a>的身份登录。<a href=\"%3$s\" title=\"登出这个帐号"
 "\">登出 &raquo;</a>"
 
-#: wp-includes/theme-compat/comments-popup.php:79 wp-login.php:711
+#: wp-includes/theme-compat/comments-popup.php:79 wp-login.php:715
 msgid "E-mail"
 msgstr "电子邮件"
 
@@ -6688,59 +6688,59 @@ msgctxt "Display name based on first name and last name"
 msgid "%1$s %2$s"
 msgstr "%2$s, %1$s"
 
-#: wp-includes/user.php:1900
+#: wp-includes/user.php:1903
 msgid "Invalid user ID."
 msgstr "用户ID无效。"
 
-#: wp-includes/user.php:1995
+#: wp-includes/user.php:1998
 msgid "AIM"
 msgstr "AIM"
 
-#: wp-includes/user.php:1996
+#: wp-includes/user.php:1999
 msgid "Yahoo IM"
 msgstr "雅虎通"
 
-#: wp-includes/user.php:1997
+#: wp-includes/user.php:2000
 msgid "Jabber / Google Talk"
 msgstr "Jabber或Google Talk"
 
-#: wp-includes/user.php:2042 wp-includes/user.php:2045
-#: wp-includes/user.php:2049 wp-includes/user.php:2060
-#: wp-includes/user.php:2076
+#: wp-includes/user.php:2045 wp-includes/user.php:2048
+#: wp-includes/user.php:2052 wp-includes/user.php:2063
+#: wp-includes/user.php:2079
 msgid "Invalid key"
 msgstr "无效key"
 
-#: wp-includes/user.php:2124
+#: wp-includes/user.php:2127
 msgid "<strong>ERROR</strong>: Please enter a username."
 msgstr "<strong>错误</strong>：请填写用户名。"
 
-#: wp-includes/user.php:2126
+#: wp-includes/user.php:2129
 msgid ""
 "<strong>ERROR</strong>: This username is invalid because it uses illegal "
 "characters. Please enter a valid username."
 msgstr "<strong>错误</strong>：此用户名包含无效字符，请输入有效的用户名。"
 
-#: wp-includes/user.php:2129
+#: wp-includes/user.php:2132
 msgid ""
 "<strong>ERROR</strong>: This username is already registered. Please choose "
 "another one."
 msgstr "<strong>错误</strong>：该用户名已被注册，请再选择一个。"
 
-#: wp-includes/user.php:2134
+#: wp-includes/user.php:2137
 msgid "<strong>ERROR</strong>: Please type your e-mail address."
 msgstr "<strong>错误</strong>：请填写电子邮件地址。"
 
-#: wp-includes/user.php:2136
+#: wp-includes/user.php:2139
 msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
 msgstr "<strong>错误</strong>：电子邮件地址不正确。"
 
-#: wp-includes/user.php:2139
+#: wp-includes/user.php:2142
 msgid ""
 "<strong>ERROR</strong>: This email is already registered, please choose "
 "another one."
 msgstr "<strong>错误</strong>：该电子邮件地址已经被注册，请换一个。"
 
-#: wp-includes/user.php:2179
+#: wp-includes/user.php:2182
 msgid ""
 "<strong>ERROR</strong>: Couldn&#8217;t register you&hellip; please contact "
 "the <a href=\"mailto:%s\">webmaster</a> !"
@@ -6950,35 +6950,35 @@ msgstr "用户名或电子邮件地址："
 msgid "Get New Password"
 msgstr "获取新密码"
 
-#: wp-login.php:590
+#: wp-login.php:593
 msgid "The passwords do not match."
 msgstr "您两次输入的密码不符。"
 
-#: wp-login.php:605
+#: wp-login.php:608
 msgid "Password Reset"
 msgstr "密码重置"
 
-#: wp-login.php:605
+#: wp-login.php:608
 msgid "Your password has been reset."
 msgstr "您的密码已被重置。"
 
-#: wp-login.php:613 wp-login.php:643
+#: wp-login.php:616 wp-login.php:647
 msgid "Reset Password"
 msgstr "重置密码"
 
-#: wp-login.php:613
+#: wp-login.php:616
 msgid "Enter your new password below."
 msgstr "请在下方输入您的新密码。"
 
-#: wp-login.php:620
+#: wp-login.php:623
 msgid "New password"
 msgstr "新密码"
 
-#: wp-login.php:624
+#: wp-login.php:627
 msgid "Confirm new password"
 msgstr "确认新密码"
 
-#: wp-login.php:629
+#: wp-login.php:632
 msgid ""
 "Hint: The password should be at least seven characters long. To make it "
 "stronger, use upper and lower case letters, numbers, and symbols like ! \" ? "
@@ -6987,27 +6987,27 @@ msgstr ""
 "提示：您的密码最好至少包含7个字符。为了保证密码强度，使用大小写字母、数字和符"
 "号（例如! \" ? $ % ^ &amp; )）。"
 
-#: wp-login.php:702
+#: wp-login.php:706
 msgid "Registration Form"
 msgstr "注册表单"
 
-#: wp-login.php:702
+#: wp-login.php:706
 msgid "Register For This Site"
 msgstr "在这个站点注册"
 
-#: wp-login.php:722
+#: wp-login.php:726
 msgid "A password will be e-mailed to you."
 msgstr "密码将通过电子邮件发送给您。"
 
-#: wp-login.php:730 wp-login.php:907
+#: wp-login.php:734 wp-login.php:911
 msgid "Password Lost and Found"
 msgstr "找回密码"
 
-#: wp-login.php:730 wp-login.php:907
+#: wp-login.php:734 wp-login.php:911
 msgid "Lost your password?"
 msgstr "忘记密码？"
 
-#: wp-login.php:770
+#: wp-login.php:774
 msgid ""
 "<strong>ERROR</strong>: Cookies are blocked due to unexpected output. For "
 "help, please see <a href=\"%1$s\">this documentation</a> or try the <a href="
@@ -7016,11 +7016,11 @@ msgstr ""
 "<strong>错误</strong>：Cookies因预料之外的输出被阻止。要获取帮助，请参见<a "
 "href=\"%1$s\">此文档</a>或访问<a href=\"%2$s\">支持论坛</a>。"
 
-#: wp-login.php:771 wp-login.php:775
+#: wp-login.php:775 wp-login.php:779
 msgid "http://codex.wordpress.org/Cookies"
 msgstr "http://codex.wordpress.org/Cookies"
 
-#: wp-login.php:774
+#: wp-login.php:778
 msgid ""
 "<strong>ERROR</strong>: Cookies are blocked or not supported by your "
 "browser. You must <a href=\"%s\">enable cookies</a> to use WordPress."
@@ -7028,36 +7028,36 @@ msgstr ""
 "<strong>错误</strong>：Cookies被阻止或者您的浏览器不支持。要使用WordPress，您"
 "必须<a href=\"%s\">启用cookies</a>。"
 
-#: wp-login.php:793
+#: wp-login.php:797
 msgid "You have logged in successfully."
 msgstr "登录成功。"
 
-#: wp-login.php:827
+#: wp-login.php:831
 msgid ""
 "Session expired. Please log in again. You will not move away from this page."
 msgstr "会话已过期，请重新登录。您不会被带离此页。"
 
-#: wp-login.php:831
+#: wp-login.php:835
 msgid "You are now logged out."
 msgstr "您已登出。"
 
-#: wp-login.php:833
+#: wp-login.php:837
 msgid "User registration is currently not allowed."
 msgstr "新用户注册暂时关闭。"
 
-#: wp-login.php:835
+#: wp-login.php:839
 msgid "Check your e-mail for the confirmation link."
 msgstr "请检查您的邮件，内有确认激活链接。"
 
-#: wp-login.php:837
+#: wp-login.php:841
 msgid "Check your e-mail for your new password."
 msgstr "请查收您邮件中的新密码。"
 
-#: wp-login.php:839
+#: wp-login.php:843
 msgid "Registration complete. Please check your e-mail."
 msgstr "注册完成。请查收我们给您发的邮件。"
 
-#: wp-login.php:841
+#: wp-login.php:845
 msgid ""
 "<strong>You have successfully updated WordPress!</strong> Please log back in "
 "to see what&#8217;s new."
