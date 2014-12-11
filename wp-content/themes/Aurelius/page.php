@@ -1,12 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Aurelius | Page</title>
-<!-- Stylesheets -->
-<link rel="stylesheet" href="./style.css" type="text/css" media="screen" />
-</head>
-<body>
+<?php get_header()?>
 <div id="wrapper" class="container_12 clearfix">
 	<!-- Text Logo -->
 	<h1 id="logo" class="grid_4">Aurelius</h1>
@@ -88,8 +80,4 @@
 	</div>
 	<div class="hr grid_12 clearfix">&nbsp;</div>
 	<!-- Footer -->
-	<p class="grid_12 footer clearfix"> <span class="float"><strong>Design By</strong> QwibbleDesigns&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Code By</strong> <a href="http://www.ludou.org/">Ludou</a></span> <a class="float right" href="#">top</a> </p>
-</div>
-<!--end wrapper-->
-</body>
-</html>
+<?php get_footer();?>

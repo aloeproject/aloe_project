@@ -43,7 +43,8 @@ elseif ( get_option('comment_registration') && !is_user_logged_in() ) :
 ?>
 <p>你必须 <a href="<?php echo wp_login_url( get_permalink() ); ?>">登录</a> 才能发表评论.</p>
 <?php else  : ?>
-<!-- Comment Form -->
+    <div class="grid_8">
+    <!-- Comment Form -->
 <form id="commentform" name="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
     <h3>发表评论</h3>
     <div class="hr dotted clearfix">&nbsp;</div>
@@ -75,4 +76,5 @@ elseif ( get_option('comment_registration') && !is_user_logged_in() ) :
     <?php comment_id_fields(); ?>
     <?php do_action('comment_form', $post->ID); ?>
 </form>
+    </div>
 <?php endif; ?>
