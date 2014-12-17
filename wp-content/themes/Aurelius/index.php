@@ -16,9 +16,7 @@
 		<?php edit_post_link('编辑', ' &bull; ', ''); ?>
 	     </p>
 	    <div class="hr dotted clearfix">&nbsp;</div>
-	    <!-- Post Image 文章的缩略图 -->
-	    <img class="thumb" alt="" src="<?php bloginfo('template_url'); ?>/images/610x150.gif" />
-	    <!-- Post Content -->
+	    <!-- Post Image 文章的缩略图-->
 	    <!--显示文字摘要-->
 	    <?php the_content('阅读全文...'); ?>
 	    <!-- Read More Button -->
@@ -27,7 +25,15 @@
 		<div class="hr clearfix">&nbsp;</div>
 		<?php } ?>
 		<!-- Blog Navigation -->
-		<p class="clearfix"> <a href="#" class="button float">&lt;&lt; Previous Posts</a> <a href="#" class="button float right">Newer Posts >></a> </p>
+		<p class="clearfix">
+            <?php if (function_exists('wp_pagenavi')) { ?>
+            <div id=”wp-nav”>
+                <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?><br />
+            </div>
+            <?php } ?>
+        <!--<a href="#" class="button float">&lt;&lt; Previous Posts</a>
+        <a href="#" class="button float right">Newer Posts >></a>-->
+        </p>
 	</div>
 	<!-- Column 2 / Sidebar -->
     <?php } else { ?>
