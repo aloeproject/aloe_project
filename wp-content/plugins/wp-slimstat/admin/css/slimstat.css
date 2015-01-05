@@ -3,6 +3,9 @@
 	outline: none;
 	text-decoration: none;
 }
+[id^=slim_] a.slimstat-delete-entry{
+	color: #bbb;
+}
 
 /* Admin Notice */
 .slimstat-notice{
@@ -368,6 +371,8 @@
 #slimstat-modal-dialog{
 	background-color: #fff;
 	display: none;
+	max-height: 650px !important;
+	overflow: auto;
 	padding: 0;
 	width: auto;
 }
@@ -423,10 +428,10 @@
 	text-decoration: none;
 }
 .form-table{
-	margin-top: -1px;
+	margin-top: 0 !important;
 }
 .form-table th{
-	padding: 15px 10px;
+	padding: 15px 10px !important;
 }
 .form-table td.slimstat-options-section-header{
 	background-color: #c0c0c0;

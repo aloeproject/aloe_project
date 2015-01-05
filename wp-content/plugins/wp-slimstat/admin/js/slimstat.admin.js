@@ -246,7 +246,7 @@ var SlimStatAdmin = {
 
 jQuery(function(){
 	// Refresh page every X seconds
-	if (SlimStatAdminParams.refresh_interval > 0){
+	if (SlimStatAdminParams.refresh_interval > 0 && !jQuery('[name^="fs\[is_past\]"]').length){
 		SlimStatAdmin._refresh_timer[0] = parseInt(SlimStatAdminParams.refresh_interval/60);
 		SlimStatAdmin._refresh_timer[1] = SlimStatAdminParams.refresh_interval%60;
 		refresh_handle = window.setTimeout("SlimStatAdmin.refresh_countdown();", 1000);
@@ -370,7 +370,7 @@ jQuery(function(){
 			jQuery('#'+report_id+' .inside').slimScroll({scrollTo : '0px'});
 		}
 		
-		if (typeof refresh_handle != 'undefined'){
+		if (typeof refresh_handle != 'undefined' && !jQuery('[name^="fs\[is_past\]"]').length){
 			window.clearTimeout(refresh_handle);
 			SlimStatAdmin._refresh_timer[0] = parseInt(SlimStatAdminParams.refresh_interval/60);
 			SlimStatAdmin._refresh_timer[1] = SlimStatAdminParams.refresh_interval%60;
@@ -399,7 +399,7 @@ jQuery(function(){
 			data: data
 		});
 	});
-	
+
 	// Enable ads on click
 	jQuery(document).on('click', '#slimstat-enable-ads-toggle', function(e){
 		e.preventDefault();
@@ -410,6 +410,22 @@ jQuery(function(){
 			type: 'post',
 			async: true,
 			data: data
+		});
+	});
+
+	// Delete Pageview
+	jQuery(document).on('click', '.slimstat-delete-entry', function(e){
+		var target = jQuery(this);
+
+		e.preventDefault();
+		data = {action: 'slimstat_delete_pageview', security: jQuery('#meta-box-order-nonce').val(), pageview_id : target.attr('data-pageview-id')};
+		jQuery.ajax({
+			url: ajaxurl,
+			type: 'post',
+			async: true,
+			data: data
+		}).done(function(){
+			target.parents('p').fadeOut(1000);
 		});
 	});
 

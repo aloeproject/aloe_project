@@ -15,6 +15,7 @@
 			$filter_operator_html .= '<option value="equals">'.__('equals','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="is_not_equal_to">'.__('is not equal to','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="contains">'.__('contains','wp-slimstat').'</option>';
+			$filter_operator_html .= '<option value="includes_in_set">'.__('is included in','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="does_not_contain">'.__('does not contain','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="starts_with">'.__('starts with','wp-slimstat').'</option>';
 			$filter_operator_html .= '<option value="ends_with">'.__('ends with','wp-slimstat').'</option>';
@@ -101,13 +102,14 @@
 				<input type="text" name="interval_hours" id="slimstat-filter-interval_hours" placeholder="<?php _e('hours', 'wp-slimstat') ?>" class="short empty-on-focus" value="<?php echo !empty(wp_slimstat_db::$filters_normalized['date']['interval_hours'])?wp_slimstat_db::$filters_normalized['date']['interval_hours']:'' ?>">:
 				<input type="text" name="interval_minutes" id="slimstat-filter-interval_minutes" placeholder="<?php _e('mins', 'wp-slimstat') ?>" class="short empty-on-focus" value="<?php echo !empty(wp_slimstat_db::$filters_normalized['date']['interval_minutes'])?wp_slimstat_db::$filters_normalized['date']['interval_minutes']:'' ?>">
 				<input type="submit" value="<?php _e('Apply','wp-slimstat') ?>" class="button-secondary">
-				<?php if (!(empty(wp_slimstat_db::$filters_normalized['date']['day']) || wp_slimstat_db::$filters_normalized['date']['day'] == date_i18n('j')) ||
+				<?php 
+				if (!empty(wp_slimstat_db::$filters_normalized['date']['day']) ||
 							!(empty(wp_slimstat_db::$filters_normalized['date']['month']) || wp_slimstat_db::$filters_normalized['date']['month'] == date_i18n('n')) || 
-							!(empty(wp_slimstat_db::$filters_normalized['date']['year']) || wp_slimstat_db::$filters_normalized['date']['year'] == date_i18n('Y')) ||
+							!empty(wp_slimstat_db::$filters_normalized['date']['year']) ||
 							!empty(wp_slimstat_db::$filters_normalized['date']['interval']) ||
 							!empty(wp_slimstat_db::$filters_normalized['date']['interval_hours']) ||
 							!empty(wp_slimstat_db::$filters_normalized['date']['interval_minutes'])): ?>
-				<a class="slimstat-filter-link button-secondary" href="<?php echo wp_slimstat_reports::fs_url('minute equals 0&&&hour equals 0&&&day equals 0&&&month equals '.date_i18n('n').'&&&year equals '.date_i18n('Y').'&&&interval_direction equals future&&&interval equals 0&&&interval_hours equals 0&&&interval_minutes equals 0') ?>"><?php _e('Reset Filters','wp-slimstat') ?></a>
+				<a class="slimstat-filter-link button-secondary" href="<?php echo wp_slimstat_reports::fs_url('minute equals 0&&&hour equals 0&&&day equals 0&&&month equals '.date_i18n('n').'&&&year equals 0&&&interval_direction equals future&&&interval equals 0&&&interval_hours equals 0&&&interval_minutes equals 0') ?>"><?php _e('Reset Filters','wp-slimstat') ?></a>
 				<?php endif ?>
 			</span>
 		</fieldset><!-- .slimstat-date-filters -->
@@ -219,6 +221,9 @@
 							break;
 						case 'slim_p4_02':
 						case 'slim_p4_05':
+						case 'slim_p4_23':
+						case 'slim_p4_24':
+						case 'slim_p4_25':
 							wp_slimstat_reports::report_header($a_box_id, 'wide');
 							break;
 						case 'slim_p1_02':

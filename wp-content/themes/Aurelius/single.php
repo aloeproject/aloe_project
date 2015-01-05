@@ -13,8 +13,6 @@
 		<?php edit_post_link('编辑', ' &bull; ', ''); ?>
 		</p>
 		<div class="hr dotted clearfix">&nbsp;</div>
-		<!-- Post Title -->
-		<img class="thumb" alt="" src="<?php bloginfo('template_url'); ?>/images/610x150.gif" />
 		<!-- Post Content -->
 		<?php the_content(); ?>
 		<!-- Post Links -->
