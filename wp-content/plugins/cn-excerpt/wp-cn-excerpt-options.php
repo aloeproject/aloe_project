@@ -10,12 +10,11 @@ $tagList  = array_unique(self::$optionsBasicTags + $allowed_tags);
 
 sort($tagList);
 
-$tag_cols = 5;
+$tagCols = 5;
 $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
 ?>
 <div class="wrap" style=" font-family:Microsoft YaHei; ">
-    <div id="icon-options-general" class="icon32"><br /></div>
-    <h2><?php _e("中文摘要设置 v" . $plugin['Version'], $this->textDomain); ?></h2>
+    <h2><span class=" dashicons-before dashicons-admin-page"></span><?php echo __("中文摘要设置 v", $this->textDomain) . $plugin['Version']; ?></h2>
 
     <form method="post" action="">
     <?php
@@ -25,7 +24,7 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
         <table id="formTable" >
             <tr valign="top">
                 <th scope="row"><label for="<?php echo $this->name; ?>_only_excerpt">
-                <?php _e("首段摘要：", $this->textDomain); ?></label></th>
+                <?php _e("首段摘要", $this->textDomain); ?></label></th>
                 <td>
                     <input name="<?php echo $this->name; ?>_finish_sentence" type="checkbox"
                            id="<?php echo $this->name; ?>_finish_sentence" value="on" <?php
@@ -35,42 +34,41 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="<?php echo $this->name; ?>_length">
-                <?php _e("摘要长度：", $this->textDomain); ?></label></th>
+                <?php _e("摘要长度", $this->textDomain); ?></label></th>
                 <td>
-                    <input name="<?php echo $this->name; ?>_length" type="text" id="<?php echo $this->name; ?>_length" value="<?php echo $length; ?>" size="10"/>个字符
+                    <input name="<?php echo $this->name; ?>_length" type="text" id="<?php echo $this->name; ?>_length" value="<?php echo $length; ?>" size="3"/><?php _e('个字符', $this->textDomain) ?>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="<?php echo $this->name; ?>_ellipsis">
-                <?php _e("省略符号：", $this->textDomain); ?></label></th>
+                <?php _e("省略符号", $this->textDomain); ?></label></th>
                 <td>
                     <input name="<?php echo $this->name; ?>_ellipsis" type="text" id="<?php echo $this->name; ?>_ellipsis" value="<?php echo $ellipsis; ?>" size="15"/>
-                    <?php _e("将会替代文章的摘要显示.默认为省略号“...”", $this->textDomain); ?>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="<?php echo $this->name; ?>_read_more">
-                <?php  _e("链接文本：", $this->textDomain); ?></label></th>
+                <?php  _e("全文链接", $this->textDomain); ?></label></th>
                 <td>
-                    <input name="<?php echo $this->name; ?>_read_more" type="text"  id="<?php echo $this->name; ?>_read_more" value="<?php echo $read_more; ?>" />
-                    <input name="<?php echo $this->name; ?>_add_link" type="checkbox"  id="<?php echo $this->name; ?>_add_link" value="on" <?php echo (1 == $add_link) ? 'checked="checked" ' : ''; ?>/>
-                           <?php _e("添加此链接到摘要结尾", $this->textDomain); ?>
+                    <div><input name="<?php echo $this->name; ?>_add_link" type="checkbox"  id="<?php echo $this->name; ?>_add_link" value="on" <?php echo (1 == $add_link) ? 'checked="checked" ' : ''; ?>/><?php _e("添加全文链接到摘要结尾", $this->textDomain); ?></div>
+                    <textarea name="<?php echo $this->name; ?>_read_more_tpl" type="text"  id="<?php echo $this->name; ?>_read_more_tpl" style="min-width:500px;"><?php echo htmlentities(stripslashes($read_more_tpl)); ?></textarea>
+                    <div><span><code>:url</code><?php _e('表示文章链接', $this->textDomain) ?></span> <br/>  <a target="_blank" href="http://dev.w3.org/html5/html-author/charref">HTML <?php _e('实体符号列表', $this->textDomain);?></a></div>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="<?php echo $this->name; ?>_no_shortcode">
-                <?php _e("过滤标签：", $this->textDomain); ?></label></th>
+                <?php _e("过滤标签", $this->textDomain); ?></label></th>
                 <td>
                     <input name="<?php echo $this->name; ?>_no_shortcode" type="checkbox" id="<?php echo $this->name; ?>_no_shortcode" value="on" <?php echo (1 == $no_shortcode) ? 'checked="checked" ' : ''; ?>/>
                            <?php _e("从摘要中移除短标签。(推荐)", $this->textDomain); ?>
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row"><?php _e("保留标签：", $this->textDomain); ?></th>
+                <th scope="row"><?php _e("保留标签", $this->textDomain); ?></th>
                 <td>
                     <table id="<?php echo $this->name; ?>_tags_table">
                         <tr>
-                            <td colspan="<?php echo $tag_cols; ?>">
+                            <td colspan="<?php echo $tagCols; ?>">
                                 <input name="<?php echo $this->name; ?>_allowed_tags[]" type="checkbox"  value="_all" <?php echo (in_array('_all', $allowed_tags)) ? 'checked="checked" ' : ''; ?>/>
                                 <?php _e("不移除任何标签", $this->textDomain); ?>
                             </td>
@@ -83,7 +81,7 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
                                 if ($tag == '_all') {
                                   continue;
                                 }
-                                if (0 == $i % $tag_cols) {
+                                if (0 == $i % $tagCols) {
                                   echo '<tr>';
                                 }
 
@@ -94,21 +92,20 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
                               <code><label for="tag<?php echo $j++;?>"><?php echo $tag; ?></label></code>
                           </td>
                           <?php
-                            if (0 == $i % $tag_cols) {
+                            if (0 == $i % $tagCols) {
                               $i = 0;
                               echo '</tr>';
                             }
                           endforeach;
-                                if (0 != $i % $tag_cols):
+                                if (0 != $i % $tagCols):
                           ?>
-                          <td colspan="<?php echo ($tag_cols - $i); ?>">&nbsp;</td>
+                          <td colspan="<?php echo ($tagCols - $i); ?>">&nbsp;</td>
                         </tr>
                             <?php
                                   endif;
                             ?>
                     </table>
-                    <a href="" id="<?php echo $this->name; ?>_select_all">全选</a>
-                    / <a href="" id="<?php echo $this->name; ?>_select_none">全不选</a><br />
+                    <a href="" id="<?php echo $this->name; ?>_select_all">全选</a> / <a href="" id="<?php echo $this->name; ?>_select_none">全不选</a><br />
                     更多标签:
                     <select name="<?php echo $this->name; ?>_more_tags" id="<?php echo $this->name; ?>_more_tags">
                       <?php
@@ -123,19 +120,23 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
                 </td>
             </tr>
         </table>
-        <div style="height:100px; line-height:50px; font-size:16px;">
-          <div>作者：<a  style="text-decoration:none;" href="http://weibo.com/joychaocc" target="_blank">@安正超 </a>
-            源码：<a href="https://github.com/overtrue/wp-cn-excerpt" target="_blank">overtrue/wp-cn-excerpt</a>
-            </div>
-            <!-- Baidu Button BEGIN -->
-            <div style="font-size:22px;height:50px; float:left; line-height:50px;">推荐给你的朋友们吧！</div>
-            <div class="bdsharebuttonbox">
-                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                <a href="#" class="bds_more" data-cmd="more"></a>
+        <div>
+            <div class="message fade">
+                <p><a href="https://github.com/overtrue" class="button" target="_blank"> @overtrue </a> <a href="https://github.com/overtrue/wp-cn-excerpt/issues" target="_blank" class="button"><?php _e('反馈问题', $this->textDomain) ?></a></p>
+                <p>作者：<a style="text-decoration:none;" href="http://weibo.com/joychaocc" target="_blank">@安正超 </a>
+                     GitHub源码：<a href="https://github.com/overtrue/wp-cn-excerpt" target="_blank">overtrue/wp-cn-excerpt</a>
+                </p>
+                <p style="color:red">另外：本插件不可能兼容所有的主题，本插件仅在主题输出内容时使用的wordpress提供<code>the_content()</code>与<code>the_excerpt()</code>等函数时才正常摘要，如果您发现无法正常摘要时，95%的机率就是与主题不兼容！</p>
+
+                <!-- Baidu Button BEGIN -->
+                <div class="bdsharebuttonbox">
+                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a href="#" class="bds_more" data-cmd="more"></a>
+                </div>
             </div>
             <script>window._bd_share_config={
                 "common":{
@@ -167,14 +168,16 @@ $plugin = get_plugin_data(__DIR__ . '/wp-cn-excerpt.php');
                 </div>
 
             <!-- Baidu Button END -->
-        <div style="padding:10px;border:1px dashed #bebebe;margin:10px 0;"><strong>注意：</strong> 使用过程中有任何问题，欢迎到<a href="http://overtrue.me" target="_blank">我的博客</a> 留言 或者给我邮件：<strong>anzhengchao@gmail.com</strong>，我会在最短的时间内尽可能的解决您的问题,感谢您的支持！</div>
         <p class="submit">
         <input type="submit" name="Submit" class="button-primary" value="<?php _e("保存设置", $this->textDomain); ?>" /></p>
     </form>
     <style type="text/css">
+    input, textarea, code, pre{font-family: Monaco, Consolas !important;}
+    #wpcontent {background: #fff;}
+    .message {margin:0 0 15px; border-color: #7ad03a;background: #fff; border-left: 4px solid #7ad03a; -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);margin: 5px 0px 2px;padding: 10px 12px;}
     #formTable{ table-layout:fixed;empty-cells:show; border-collapse: collapse; clear: both;}
-    #formTable th{width: 80px; text-align:left;padding: 10px 0;border-bottom: 1px solid #bebebe;}
-    #formTable td{padding: 10px 0; line-height: 2em; border-bottom: 1px solid #bebebe;}
+    #formTable th{width: 80px; text-align:left;padding: 10px 0;border-bottom: 1px solid #eee;}
+    #formTable td{padding: 10px 0; line-height: 2em; border-bottom: 1px solid #eee;}
     #formTable table td{line-height: auto;padding: 0;border-bottom:none;}
     </style>
 

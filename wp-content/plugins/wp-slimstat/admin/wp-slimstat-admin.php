@@ -12,7 +12,7 @@ class wp_slimstat_admin{
 	 */
 	public static function init(){
 		if ((wp_slimstat::$options['enable_ads_network'] == 'yes' || wp_slimstat::$options['enable_ads_network'] == 'no')){
-			self::$admin_notice = "We got lots of requests to test our heatmap add-on: thank you all for your help! In order to streamline our support service, we're migrating our ticketing system to Freshdesk (sorry, osTicket). This new site will also include searchable FAQs and much more. <a target='_blank' href='http://support.getused.to.it/'>Feel free to stop by</a> and say hello.";
+			self::$admin_notice = "We're starting to work on a completely redesigned data layer, which will require less SQL resources and offer a much needed performance improvement. We hope to have it ready in time for version 4.0. Some experimental code will be added to one of the next releases, with the option to deactivate it and use the classic library. Stay tuned!";
 		}
 		else {
 			self::$admin_notice = "

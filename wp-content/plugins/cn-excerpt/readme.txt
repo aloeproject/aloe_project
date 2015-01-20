@@ -3,7 +3,7 @@ Contributors: Carlos
 Tags: 中文摘要,摘要,chinese,cn,excerpt, advanced, post, posts, template, formatting
 Donate link: https://github.com/overtrue
 Requires at least: 3.2
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag:4.3.7
 
 
@@ -26,18 +26,30 @@ Stable tag:4.3.7
  <p>"控制面板" > "中文摘要设置"</p>
 
 == Installation ==
+
 1，下载插件上传到/wp-content/plugins/目录后台启用即可
+
 2，后台“插件”->“安装插件”->搜索框输入："wp cn experct"->安装启用即可
 
 == Changelog ==
-= 4.3.0=
+
+= 4.4.0 =
+
+- “阅读全文”支持自定义模板
+- 重构部分代码
+- bugfix
+
+= 4.3.0 =
+
 - 重构截取算法，更友好的结果
 - 重构大部分代码
 - bugfix
 
-= 4.1.7=
+= 4.1.7 =
+
 添加可选the_excerpt显示摘要选项
 
-= 4.1.6=
+= 4.1.6 =
+
 修正了默认主题下无法摘要的bug
 
