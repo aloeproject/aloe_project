@@ -3,8 +3,8 @@ Theme Name: Sparkling
 Theme URI: http://colorlib.com/wp/themes/sparkling
 Author: Colorlib
 Author URI: http://colorlib.com/
-Description: Sparkling is a clean minimal and responsive WordPress theme well suited for travel, health, business, finance, portfolio, design, art, photography, personal and any other creative websites and blogs. Developed using Bootstrap 3 that makes it mobile and tablets friendly. Theme comes with full-screen slider, social icon integration, author bio, popular posts widget and improved category widget. Sparkling incorporates latest web standards such as HTML5 and CSS3 and is SEO friendly thanks to its clean structure and codebase. It has dozens of Theme Options to change theme layout, colors, fonts, slider settings and much more. Theme is also translation and multilingual ready and is available in Spanish, French, Dutch, Polish, Russian, German Brazilian Portuguese and Italian. Sparkling is a free WordPress theme with premium functionality and design. Now theme is optimized to work with bbPress, Contact Form 7, Jetpack and other popular free and premium plugins.
-Version: 1.6.0
+Description: Sparkling is a clean minimal and responsive WordPress theme well suited for travel, health, business, finance, portfolio, design, art, photography, personal and any other creative websites and blogs. Developed using Bootstrap 3 that makes it mobile and tablets friendly. Theme comes with full-screen slider, social icon integration, author bio, popular posts widget and improved category widget. Sparkling incorporates latest web standards such as HTML5 and CSS3 and is SEO friendly thanks to its clean structure and codebase. It has dozens of Theme Options to change theme layout, colors, fonts, slider settings and much more. Theme is also translation and multilingual ready, compatible with WPML and is available in Spanish, French, Dutch, Polish, Russian, German, Brazilian Portuguese, Portuguese (Portugal), Persian (Iranian language), Romanian, Turkish, Bulgarian, Japanese, Lithuanian, Czech, Ukrainian, Traditional Chinese, Simplified Chinese, Indonesian and Italian. Sparkling is a free WordPress theme with premium functionality and design. Now theme is optimized to work with bbPress, Contact Form 7, Jetpack and other popular free and premium plugins.
+Version: 1.9.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sparkling
@@ -14,7 +14,7 @@ Tags: green, light, white, gray, black, one-column, two-columns, right-sidebar, 
 
 This theme, like WordPress, is licensed under the GPL.
 
-sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+sparkling is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 */
 
@@ -140,6 +140,7 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 }
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
@@ -150,6 +151,7 @@ textarea {
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
@@ -158,6 +160,7 @@ textarea:focus {
 }
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
@@ -229,7 +232,8 @@ textarea {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.home-widget-area:before {
   content: '';
   display: table;
 }
@@ -240,7 +244,8 @@ textarea {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.home-widget-area:before {
   clear: both;
 }
 
@@ -369,23 +374,7 @@ hr.section-divider {
   text-transform: uppercase;
   font-weight: 700;
 }
-.comment-reply-title {
-  font-size: 14px;
-}
-.comment-reply-link {
-  background: #C1C0C0;
-  border: #C1C0C0;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-.page-template-page-fullwidth-php .col-md-8 {
-  width: 100%;
-}
-@media(max-width:767px){
-    .post-inner-content {
-        padding: 20px 25px;
-    }
-}
+
 /* =Singe Post/Page Pagination
 ----------------------------------------------- */
 .page-links span {
@@ -754,9 +743,10 @@ button:hover {
 /* =Navigation
 ----------------------------------------------- */
 
-.site-content [class*="navigation"] a {
+.post-navigation a,
+.paging-navigation a {
   border: 1px solid #DADADA;
-  background-color: #fff;
+  background-color: #FFF;
   padding: 8px 14px;
   font-size: 12px;
   border-radius: 4px;
@@ -764,13 +754,23 @@ button:hover {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
+.post-navigation a:hover,
+.paging-navigation a:hover {
+  color: #FFF;
+  background: #DA4453;
+  text-decoration: none;
+}
 .paging-navigation {
   text-transform: uppercase;
 }
-.site-content [class*="navigation"] a:hover {
-  color: #fff;
-  background: #DA4453;
-  text-decoration: none;
+.post-navigation .nav-previous,
+.paging-navigation .nav-previous {
+  float: left;
+}
+.post-navigation .nav-next,
+.paging-navigation .nav-next  {
+  float: right;
+  text-align: right;
 }
 .more-link {
   float: right;
@@ -778,13 +778,6 @@ button:hover {
 }
 .single .nav-links {
     margin-top: 30px;
-}
-[class*="navigation"] .nav-previous {
-  float: left;
-}
-[class*="navigation"] .nav-next {
-  float: right;
-  text-align: right;
 }
 .nav>li>a {
   text-transform: uppercase;
@@ -837,24 +830,34 @@ button:hover {
   color: #fff;
   background-color: #DA4453;
 }
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+  .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+    color: #fff;
+    background-color: #DA4453;
+  }
+}
 .dropdown-menu {
   font-size: 13px;
 }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-  color: #656D78;
+.navbar-default .navbar-nav .current-menu-ancestor a.dropdown-toggle {
+  color: #DA4453;
+  background-color: transparent;
 }
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #DADADA;
+.navbar-default .navbar-nav .open .dropdown-menu > li.active > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #DADADA;
+}
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
   }
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
-}
-@media (min-width: 767px) {
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
 }
 .dropdown-menu > li > a {
   padding: 10px 15px;
@@ -872,7 +875,6 @@ button:hover {
   background-color: #DA4453;
   color: #fff;
 }
-
 .dropdown-menu .divider {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -883,7 +885,6 @@ button:hover {
   padding-top: 18px;
   padding-bottom: 18px;
 }
-
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: transparent;
@@ -998,7 +999,23 @@ p.logged-in-as {
   overflow: hidden;
   margin-top: 30px;
 }
-
+.comment-reply-title {
+  font-size: 14px;
+}
+.comment-reply-link {
+  background: #C1C0C0;
+  border: #C1C0C0;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+@media(max-width:767px){
+  .post-inner-content {
+    padding: 20px 25px;
+  }
+  .comment-list .children {
+    padding-left: 10px;
+  }
+}
 /* =Attachment styling
 ----------------------------------------------- */
 #image-navigation .nav-previous a,
@@ -1016,6 +1033,12 @@ p.logged-in-as {
 #image-navigation .nav-previous,
 #image-navigation .nav-next {
   margin: 10px 0;
+}
+#image-navigation .nav-previous a {
+  float: left;
+}
+#image-navigation .nav-next a {
+  float: right;
 }
 
 /* =Gallery
@@ -1305,6 +1328,12 @@ p.logged-in-as {
 }
 .social-icons a.soundcloud:hover {
   background-color: #F50 !important;
+}
+.social-icons a.github:hover {
+  background-color: #4183C4 !important;
+}
+.social-icons a.spotify:hover {
+  background-color: #81b71a !important;
 }
 .fa-googleplus:before {
   content: "\f0d5";

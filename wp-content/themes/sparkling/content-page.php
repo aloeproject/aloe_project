@@ -18,11 +18,17 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'sparkling' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sparkling' ),
 				'after'  => '</div>',
 			) );
 		?>
+    <?php
+      // Checks if this is homepage to enable homepage widgets
+      if ( is_front_page() ) :
+        get_sidebar( 'home' );
+      endif;
+    ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'sparkling' ), '<footer class="entry-footer"><i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( esc_html__( 'Edit', 'sparkling' ), '<footer class="entry-footer"><i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->
 </div>

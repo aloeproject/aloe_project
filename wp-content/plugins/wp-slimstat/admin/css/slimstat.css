@@ -6,17 +6,16 @@
 [id^=slim_] a.slimstat-delete-entry{
 	color: #bbb;
 }
+.slimstat-float-right{
+	float: right;
+}
 
 /* Admin Notice */
 .slimstat-notice{
 	overflow: hidden;
 }
 .slimstat-notice span{
-	float: left;
 	width: 97%;
-}
-#slimstat-hide-admin-notice{
-	float: right;
 }
 .slimstat-notice .fixed-height {
 	height: 120px;
@@ -40,21 +39,21 @@
 	width: 15%;
 }
 #slimstat-date-filters{
-	padding: 5px 5px 5px 10px;
+	padding: 4px 10px 6px 20px;
 	position: absolute;
 	right: 5px;
 	top: 5px;
 }
 #slimstat-date-filters>a{
 	color: #fff;
+	white-space: nowrap;
 }
-#slimstat-date-filters>a:after{
+#slimstat-date-filters>a::after{
 	content: "\f140";
 	font: normal 20px/1 'dashicons';
-	float: right;
-	vertical-align: bottom;
+	  vertical-align: bottom;
 }
-#slimstat-date-filters>a.open:after{
+#slimstat-date-filters>a.open::after{
 	content: "\f142";
 }
 #slimstat-date-filters span{
@@ -64,8 +63,8 @@
 	display: none;
 	padding: 5px 0 5px 5px;
 	position: absolute;
-	right: 0;
-	top: 30px;
+	right: -4px;
+	top: 35px;
 	width: 450px;
 	z-index: 120;
 }
@@ -127,7 +126,7 @@
 }
 
 /* Single Report */
-.wrap.slimstat .postbox{
+.wrap.slimstat .postbox, .wrap.slimstat .sortable-placeholder{
 	float: left;
 	height: 282px;
 	margin-right: .5%;
@@ -138,9 +137,17 @@
 .wrap.slimstat .postbox.wide{
 	width:65.8%
 }
+.wrap.slimstat .postbox.full-width{
+	width:99%
+}
 .wrap.slimstat .postbox.tall{
 	height:661px;
-	width:100%;
+}
+
+.sortable-placeholder{
+	background-color: #ccc;
+	border: 1px dashed #bbb;
+	margin-bottom:20px
 }
 
 /* Single Report: Header and Header Buttons */
@@ -148,6 +155,10 @@
 	font-size: 1.2em;
 	margin: 0;
 	padding: 5px 10px;
+}
+.wrap.slimstat .postbox .hndle a{
+	font-size: 1em;
+	font-weight: 700;
 }
 .wrap.slimstat .postbox.tall .hndle{
 	cursor:auto;
@@ -171,18 +182,25 @@
 .wrap.slimstat .hndle .slimstat-tooltip-trigger.corner{
 	right: 0;
 }
+.slimstat .no-refresh .refresh{
+	display: none;
+}
 
 /* Single Report: Header and Header Buttons - Pagination */
 [id^=slim_] p.pagination{
-	background-color: #c0c0c0;
-	color: #fff;
+	background-color: #e0e0e0;
+	border-bottom: 1px solid #cde;
+	border-top: 1px solid #cde;
+	color: #444;
+	line-height: 1em;
+	min-height: 5px;
 }
 [id^=slim_] p.pagination a{
-	color: #fff;
+	color: #444;
 	float: right;
 }
 [id^=slim_] p.pagination a:hover{
-	text-shadow: 0 0 3px #000;
+	text-shadow: 0 0 2px #000;
 }
 
 /* Single Report: Inside */
@@ -198,6 +216,7 @@
 [id^=slim_] p{
 	border-bottom: 1px solid #ddd;
 	font-weight: 300;
+	line-height: 1.5;
 	margin: 0;
 	min-height: 20px;
 	overflow: auto;
@@ -223,6 +242,9 @@
 }
 [id^=slim_] p span{
 	float: right;
+}
+[id^=slim_] p span.pageview-screenres{
+	margin-right: 10px;
 }
 [id^=slim_] a:hover{
 	text-shadow: 0 0 2px #bbb;
@@ -253,10 +275,19 @@
 	display: none;
 }
 
+/* Single Report: Table */
+[id^=slim_] .widefat th{
+	white-space: nowrap;
+}
+[id^=slim_] .widefat td{
+	  border-bottom: 1px solid #e1e1e1;
+}
+
 /* Single Report: Debug Message */
-.slimstat .debug{
+[id^=slim_] .debug{
 	background-color: #000;
 	color: #fff;
+	display: block;
 	font-family: monospace;
 	opacity: .8;
 	padding: 20px;
@@ -403,9 +434,11 @@
 	margin-right: 10px;
 	vertical-align: bottom;
 }
+#slimstat-message.wp-ui-notification p:before{
+	content: "\f160";
+}
 #slimstat-message p{
-	font-size: 16px;
-	line-height: .8em;
+	line-height: 1em;
 }
 #slimstat-message a{
 	color: #fc0;
@@ -457,6 +490,14 @@
 }
 .form-table #slimstat-filter-name, .form-table #slimstat-filter-operator, .form-table #slimstat-filter-value{
 	width: 20%;
+}
+[id^=form-slimstat-options] input[type=number].small-text{
+	width: 85px;
+}
+.slimstat p.submit{
+	position: fixed;
+	right: 25px;
+	top: 30px;
 }
 
 /* Add-ons Page */

@@ -3,7 +3,7 @@ Contributors: GamerZ
 Donate link: http://leterchan.net/site/donation/  
 Tags: stat, stats, statistics, wp-stats, wp-stat, top, most, widget, popular, information  
 Requires at least: 2.8  
-Tested up to: 4.1  
+Tested up to: 4.3  
 Stable tag: trunk  
 
 Display your WordPress blog statistics. Ranging from general total statistics, some of my plugins statistics and top 10 statistics.
@@ -23,9 +23,15 @@ Display your WordPress blog statistics. Ranging from general total statistics, s
 * Plugin icon by [SimpleIcon](http://www.simpleicon.com) from [Flaticon](http://www.flaticon.com)
 
 = Donations =
-I spent most of my free time creating, updating, maintaining and supporting these plugins, if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. If not feel free to use it without any obligations.
+I spent most of my free time creating, updating, maintaining and supporting these plugins, if you really love my plugins and could spare me a couple of bucks, I will really appreciate it. If not feel free to use it without any obligations.
 
 == Changelog ==
+= Version 2.53 =
+* FIXED: Notices in Widget Constructor for WordPress 4.3
+
+= Version 2.52 =
+* FIXED: Added nonce field and esc_url() to fix XSS. Props HSASec-Team.
+
 = Version 2.51 =
 * NEW: Supports WordPress Multisite Network Activation
 * NEW: Uses WordPress native uninstall.php

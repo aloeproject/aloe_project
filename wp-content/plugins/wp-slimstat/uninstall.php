@@ -13,36 +13,42 @@ else {
 if (function_exists('is_multisite') && is_multisite()) {
 	$blogids = $GLOBALS['wpdb']->get_col($GLOBALS['wpdb']->prepare("
 		SELECT blog_id
-		FROM $wpdb->blogs
+		FROM {$GLOBALS['wpdb']->blogs}
 		WHERE site_id = %d
 			AND deleted = 0
 			AND spam = 0", $GLOBALS['wpdb']->siteid));
 
 	foreach ($blogids as $blog_id) {
 		switch_to_blog($blog_id);
-		slimstat_uninstall($slimstat_wpdb);
+		slimstat_uninstall($slimstat_wpdb, $slimstat_options);
+		restore_current_blog();
 	}
-	restore_current_blog();
 }
 else{
-	slimstat_uninstall($slimstat_wpdb);
+	slimstat_uninstall($slimstat_wpdb, $slimstat_options);
 }
 
 $slimstat_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->base_prefix}slim_browsers");
 $slimstat_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->base_prefix}slim_screenres");
 $slimstat_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->base_prefix}slim_content_info");
 
-function slimstat_uninstall($_wpdb = ''){
+function slimstat_uninstall($_wpdb = '', $_options = array()){
 	// Goodbye data...
 	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_outbound");
+	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_events");
 	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_stats");
+	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_stats_archive");
+	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_stats_3");
+	$_wpdb->query("DROP TABLE IF EXISTS {$GLOBALS['wpdb']->prefix}slim_stats_archive_3");
 
 	// Goodbye options...
 	delete_option('slimstat_options');
 	delete_option('slimstat_visit_id');
 	delete_option('slimstat_filters');
 
-	$GLOBALS['wpdb']->query("DELETE FROM {$GLOBALS['wpdb']->prefix}usermeta WHERE meta_key LIKE '%wp-slimstat%'");
+	$GLOBALS['wpdb']->query("DELETE FROM {$GLOBALS['wpdb']->prefix}usermeta WHERE meta_key LIKE '%meta-box-order_slimstat%'");
+	$GLOBALS['wpdb']->query("DELETE FROM {$GLOBALS['wpdb']->prefix}usermeta WHERE meta_key LIKE '%metaboxhidden_slimstat%'");
+	$GLOBALS['wpdb']->query("DELETE FROM {$GLOBALS['wpdb']->prefix}usermeta WHERE meta_key LIKE '%closedpostboxes_slimstat%'");
 
 	// Remove scheduled autopurge events
 	wp_clear_scheduled_hook('wp_slimstat_purge');

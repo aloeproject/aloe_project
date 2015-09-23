@@ -104,27 +104,6 @@ wp_embed_register_handler( 'youku',
 
 
 /**
- * Chinese administration screens style - enqueue stylesheet
- *
- * This patch serves as a work-around to fix the font-size and font-style.
- *
- * Submit better CSS rules here:
- *  http://cn.wordpress.org/contact/
- *
- * @since 3.3.0
- */
-function zh_cn_l10n_patch_admin_screens_style_enqueue_stylesheet() {
-	wp_register_style( 'zh-cn-l10n-administration-screens',
-		content_url( ( WP_DEBUG ? '/languages/zh_CN-administration-screens.dev.css' : '/languages/zh_CN-administration-screens.css' ) ),
-		array( 'wp-admin' ),
-		'20111120');
-	wp_enqueue_style( 'zh-cn-l10n-administration-screens' );
-}
-add_action( 'admin_init',
-	'zh_cn_l10n_patch_admin_screens_style_enqueue_stylesheet' );
-
-
-/**
  * Chinese character count - register script
  *
  * This patch serves as a work-around to fix the built-in word-count.js.

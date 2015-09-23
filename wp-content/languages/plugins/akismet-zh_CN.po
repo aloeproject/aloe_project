@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Akismet\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-12-23 01:11-0000\n"
+"PO-Revision-Date: 2015-04-23 02:21-0000\n"
 "Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
 "Language-Team: WordPress China\n"
 "Language: zh_CN\n"
@@ -13,18 +13,98 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.6\n"
 
-#: views/config.php:97
+#: views/notice.php:90
+msgid "The key you entered could not be verified."
+msgstr "您输入的密钥无法被验证。"
+
+#: views/notice.php:91
 msgid ""
-"Spam in the <a href=\"%s\">spam folder</a> older than 1 day is deleted "
+"The connection to akismet.com cannot be established. Please refer to <a href="
+"\"%s\" target=\"_blank\">our guide about firewalls</a> and check your server "
+"configuration."
+msgstr ""
+"无法建立到akismet.com的连接。请参见<a href=\"%s\" target=\"_blank\">我们关于"
+"防火墙的指引</a>并检查您的服务器配置。"
+
+#: views/config.php:76
+msgid "SSL Status"
+msgstr "SSL状态"
+
+#: views/config.php:83 views/config.php:86
+msgid "Disabled."
+msgstr "已禁用。"
+
+#: views/config.php:86
+msgid ""
+"Your Web server cannot make SSL requests; contact your Web host and ask them "
+"to add support for SSL requests."
+msgstr ""
+"您的服务器不能发起SSL请求，请与您的主机服务提供商联系并让他们加入SSL请求支"
+"持。"
+
+#: views/config.php:92
+msgid "Temporarily disabled."
+msgstr "临时禁用。"
+
+#: views/config.php:92
+msgid ""
+"Akismet encountered a problem with a previous SSL request and disabled it "
+"temporarily. It will begin using SSL for requests again shortly."
+msgstr ""
+"Akismet在上次SSL请求时遇到了错误，并已将其暂时禁用。稍后即会重试SSL请求。"
+
+#: views/config.php:95
+msgid "Enabled."
+msgstr "已启用。"
+
+#: views/config.php:95
+msgid "All systems functional."
+msgstr "所有系统正常。"
+
+#: views/notice.php:97
+msgid ""
+"Your Pro subscription allows the use of Akismet on only one site. Please <a "
+"href=\"http://docs.akismet.com/billing/add-more-sites/\">purchase additional "
+"Pro subscriptions</a> or upgrade to an Enterprise subscription that allows "
+"the use of Akismet on unlimited sites.<br /><br />If you have any questions, "
+"please get in touch with our support team."
+msgstr ""
+"您的Pro订阅仅允许您在一个站点上使用Akismet。请<a href=\"http://docs.akismet."
+"com/billing/add-more-sites/\">购买更多的Pro订阅</a>或者升级到允许您在无穷多个"
+"站点上使用Akismet的Enterprise订阅。<br /><br />如果您有任何问题，请与我们的支"
+"持团队取得联系。"
+
+#: views/config.php:127
+msgid ""
+"Spam in the <a href=\"%1$s\">spam folder</a> older than 1 day is deleted "
 "automatically."
 msgid_plural ""
 "Spam in the <a href=\"%1$s\">spam folder</a> older than %2$d days is deleted "
 "automatically."
-msgstr[0] "<a href=\"%1$s\">垃圾评论目录</a>中%2$d天前的垃圾评论将被自动删除。"
+msgstr[0] ""
+"<a href=\"%1$s\">垃圾评论目录</a>中的垃圾评论将在%2$d天后被自动删除。"
 
-#: class.akismet-admin.php:700
+#. Plugin URI of the plugin/theme
+msgid "http://akismet.com/"
+msgstr "http://akismet.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"Used by millions, Akismet is quite possibly the best way in the world to "
+"<strong>protect your blog from comment and trackback spam</strong>. It keeps "
+"your site protected from spam even while you sleep. To get started: 1) Click "
+"the \"Activate\" link to the left of this description, 2) <a href=\"http://"
+"akismet.com/get/\">Sign up for an Akismet API key</a>, and 3) Go to your "
+"Akismet configuration page, and save your API key."
+msgstr ""
+"Akismet可能是世界上最好的<strong>为您的博客防御垃圾评论与垃圾trackback</"
+"strong>的工具，有着数百万用户。就算您在睡觉，它也会为您阻挡垃圾评论。要开始："
+"1) 点击描述左侧的“激活”链接，2) <a href=\"http://akismet.com/get/\">注册一个"
+"Akismet API密钥</a>，然后3) 前往您的Akismet配置页，并保存您的API密钥。"
+
+#: class.akismet-admin.php:692
 msgid ""
 "Please check your <a href=\"%s\">Akismet configuration</a> and contact your "
 "web host if problems persist."
@@ -76,23 +156,23 @@ msgstr "您的%s订阅已取消"
 msgid "Reactivate Akismet"
 msgstr "重新激活Akismet"
 
-#: views/config.php:152
+#: views/config.php:182
 msgid "Cancelled"
 msgstr "已取消"
 
-#: views/config.php:154
+#: views/config.php:184
 msgid "Suspended"
 msgstr "挂起"
 
-#: views/config.php:156
+#: views/config.php:186
 msgid "Missing"
 msgstr "缺少"
 
-#: views/config.php:158
+#: views/config.php:188
 msgid "No Subscription Found"
 msgstr "未找到订阅"
 
-#: views/config.php:160
+#: views/config.php:190
 msgid "Active"
 msgstr "活跃"
 
@@ -113,7 +193,7 @@ msgstr ""
 "选择一个。如果您有疑问，请<a href=\"%s\" target=\"_blank\">联系我们的支持团队"
 "</a>。"
 
-#: class.akismet-admin.php:196 views/config.php:84
+#: class.akismet-admin.php:196 views/config.php:114
 msgid "Strictness"
 msgstr "严密度"
 
@@ -123,15 +203,15 @@ msgid ""
 "spam in spam folder."
 msgstr "选择自动丢弃明显的垃圾评论或总是将他们放进垃圾文件夹。"
 
-#: views/config.php:88
+#: views/config.php:118
 msgid "Silently discard the worst and most pervasive spam so I never see it."
 msgstr "不加提示地丢弃十分明显的垃圾，我不想看到他们。"
 
-#: views/config.php:89
+#: views/config.php:119
 msgid "Always put spam in the Spam folder for review."
 msgstr "总是将垃圾评论放进垃圾文件夹以便审阅。"
 
-#: class.akismet-admin.php:195 views/config.php:75
+#: class.akismet-admin.php:195 views/config.php:105
 msgid "Comments"
 msgstr "评论"
 
@@ -139,28 +219,17 @@ msgstr "评论"
 msgid "Your subscription is missing."
 msgstr "缺少您的订阅。"
 
-#: views/notice.php:95
+#: views/notice.php:96
 msgid ""
 "You're using your Akismet key on more sites than your Pro subscription "
 "allows."
 msgstr "您在多于您的Pro订阅允许数量的站点上使用了您的Akismet密钥。"
 
-#: views/notice.php:96
-msgid ""
-"If you would like to use Akismet on more than 10 sites, you will need to <a "
-"href=\"%s\" target=\"_blank\">upgrade to an Enterprise subscription</a>. If "
-"you have any questions, please <a href=\"%s\" target=\"_blank\">get in touch "
-"with our support team</a>"
-msgstr ""
-"如果您希望在多于10个站点上使用Akismet，您需要<a href=\"%s\" target=\"_blank"
-"\">升级到Enterprise订阅</a>。如果您有任何问题，请<a href=\"%s\" target="
-"\"_blank\">与我们的支持团队联系</a>"
-
-#: views/notice.php:98
+#: views/notice.php:99
 msgid "You're using Akismet on far too many sites for your Pro subscription."
 msgstr "您在远多于您的Pro订阅允许数量的站点上使用了Akismet。"
 
-#: views/notice.php:99
+#: views/notice.php:100
 msgid ""
 "To continue your service, <a href=\"%s\" target=\"_blank\">upgrade to an "
 "Enterprise subscription</a>, which covers an unlimited number of sites. "
@@ -256,14 +325,6 @@ msgstr "您的Akismet账号已被成功设置并激活，祝您使用愉快！"
 msgid "The key you entered is invalid. Please double-check it."
 msgstr "输入的密钥无效，请确认。"
 
-#: views/notice.php:90
-msgid ""
-"The key you entered could not be verified because a connection to akismet."
-"com could not be established. Please check your server configuration."
-msgstr ""
-"无法建立到akismet.com的连接，因此无法验证您输入的密钥是否有效。请检查您的服务"
-"器配置。"
-
 #: views/start.php:40 views/start.php:74
 msgid ""
 "Akismet eliminates the comment and trackback spam you get on your site. To "
@@ -325,7 +386,7 @@ msgstr "不要紧！联系我们，我们会帮您解决问题。"
 msgid "Contact Akismet support"
 msgstr "联系Akismet支持"
 
-#: views/config.php:87 views/strict.php:2 views/strict.php:3
+#: views/config.php:117 views/strict.php:2 views/strict.php:3
 msgid "Akismet anti-spam strictness"
 msgstr "Akismet反垃圾严密度"
 
@@ -337,12 +398,21 @@ msgstr "严格：不加提示地丢弃十分明显的垃圾。"
 msgid "Safe: always put spam in the Spam folder for review."
 msgstr "安全：总是将垃圾评论放进垃圾文件夹以便审阅。"
 
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Author URI of the plugin/theme
+msgid "http://automattic.com/wordpress-plugins/"
+msgstr "http://automattic.com/wordpress-plugins/"
+
 #: class.akismet-admin.php:53
 msgid "Comment History"
 msgstr "评论历史"
 
+#. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:76 class.akismet-admin.php:78
-#: class.akismet-admin.php:757 views/config.php:3
+#: class.akismet-admin.php:749 views/config.php:3
 msgid "Akismet"
 msgstr "Akismet"
 
@@ -436,7 +506,7 @@ msgid ""
 msgstr "您可在这页上输入/移除API密钥、查看账户详情与垃圾评论统计。"
 
 #: class.akismet-admin.php:69 class.akismet-admin.php:191
-#: class.akismet-admin.php:508 views/config.php:60 views/stats.php:2
+#: class.akismet-admin.php:500 views/config.php:60 views/stats.php:2
 msgid "Settings"
 msgstr "设置"
 
@@ -448,7 +518,7 @@ msgstr "API密钥"
 msgid "Enter/remove an API key."
 msgstr "输入/移除API密钥。"
 
-#: views/config.php:79
+#: views/config.php:109
 msgid "Show the number of approved comments beside each comment author"
 msgstr "在评论者名字旁边显示此人评论获准的次数"
 
@@ -458,11 +528,11 @@ msgid ""
 "comments list page."
 msgstr "于评论列表页在评论者名字旁边显示此人评论获准的次数。"
 
-#: class.akismet-admin.php:203 views/config.php:135
+#: class.akismet-admin.php:203 views/config.php:165
 msgid "Account"
 msgstr "帐户"
 
-#: class.akismet-admin.php:206 views/config.php:140
+#: class.akismet-admin.php:206 views/config.php:170
 msgid "Subscription Type"
 msgstr "订阅类型"
 
@@ -470,7 +540,7 @@ msgstr "订阅类型"
 msgid "The Akismet subscription plan"
 msgstr "Akismet订阅计划"
 
-#: class.akismet-admin.php:207 views/config.php:147
+#: class.akismet-admin.php:207 views/config.php:177
 msgid "Status"
 msgstr "状态"
 
@@ -510,7 +580,7 @@ msgstr[0] ""
 "<a href=\"%1$s\">Akismet</a>为您的站点阻挡了<a href=\"%2$s\">%3$s条垃圾评论</"
 "a>。"
 
-#: class.akismet-admin.php:303
+#: class.akismet-admin.php:294
 msgid ""
 "<a href=\"%1$s\">Akismet</a> has protected your site from %2$s spam comment "
 "already. "
@@ -519,100 +589,100 @@ msgid_plural ""
 "already. "
 msgstr[0] "<a href=\"%1$s\">Akismet</a>已经为您的站点阻挡了%2$s条垃圾评论。"
 
-#: class.akismet-admin.php:309
+#: class.akismet-admin.php:300
 msgid "<a href=\"%s\">Akismet</a> blocks spam from getting to your blog. "
 msgstr "<a href=\"%1$s\">Akismet</a>保护您的博客，使其免受垃圾评论的困扰。"
 
-#: class.akismet-admin.php:314
+#: class.akismet-admin.php:306
 msgid ""
 "There&#8217;s <a href=\"%2$s\">%1$s comment</a> in your spam queue right now."
 msgid_plural ""
 "There are <a href=\"%2$s\">%1$s comments</a> in your spam queue right now."
 msgstr[0] "垃圾评论审核队列中有<a href=\"%2$s\">%1$s条评论</a>待审。"
 
-#: class.akismet-admin.php:320
+#: class.akismet-admin.php:312
 msgid ""
 "There&#8217;s nothing in your <a href='%s'>spam queue</a> at the moment."
 msgstr "目前<a href='%s'>垃圾评论队列</a>为空。"
 
-#: class.akismet-admin.php:340
+#: class.akismet-admin.php:332
 msgid "Check for Spam"
 msgstr "检查垃圾评论"
 
-#: class.akismet.php:442
+#: class.akismet.php:446
 msgid "%1$s changed the comment status to %2$s"
 msgstr "%1$s修改评论状态为%2$s"
 
-#: class.akismet-admin.php:382
+#: class.akismet-admin.php:374
 msgid "Akismet re-checked and caught this comment as spam"
 msgstr "经Akismet复查，我们新截获了此条评论"
 
-#: class.akismet-admin.php:388
+#: class.akismet-admin.php:380
 msgid "Akismet re-checked and cleared this comment"
 msgstr "Akismet复查了此条评论，现在认为它不是垃圾评论了"
 
-#: class.akismet-admin.php:392
+#: class.akismet-admin.php:384
 msgid "Akismet was unable to re-check this comment (response: %s)"
 msgstr "Akismet无法复查此条评论（回应：%s）"
 
-#: class.akismet-admin.php:446
+#: class.akismet-admin.php:438
 msgid "Awaiting spam check"
 msgstr "等待垃圾检查"
 
-#: class.akismet-admin.php:450
+#: class.akismet-admin.php:442
 msgid "Flagged as spam by Akismet"
 msgstr "由Akismet标记为垃圾评论"
 
-#: class.akismet-admin.php:452
+#: class.akismet-admin.php:444
 msgid "Cleared by Akismet"
 msgstr "由Akismet核查通过"
 
-#: class.akismet-admin.php:456
+#: class.akismet-admin.php:448
 msgid "Flagged as spam by %s"
 msgstr "由%s标记为垃圾"
 
-#: class.akismet-admin.php:458
+#: class.akismet-admin.php:450
 msgid "Un-spammed by %s"
 msgstr "由%s取消标记为垃圾"
 
-#: class.akismet-admin.php:470 class.akismet-admin.php:478
+#: class.akismet-admin.php:462 class.akismet-admin.php:470
 msgid "View comment history"
 msgstr "查看评论历史"
 
-#: class.akismet-admin.php:470
+#: class.akismet-admin.php:462
 msgid "History"
 msgstr "历史"
 
-#: class.akismet-admin.php:486
+#: class.akismet-admin.php:478
 msgid "%s approved"
 msgid_plural "%s approved"
 msgstr[0] "%s获准"
 
-#: class.akismet-admin.php:499
+#: class.akismet-admin.php:491
 msgid "%s ago"
 msgstr "%s前"
 
-#: class.akismet.php:487
+#: class.akismet.php:491
 msgid "%s reported this comment as spam"
 msgstr "%s认定这是垃圾评论"
 
-#: class.akismet.php:533
+#: class.akismet.php:537
 msgid "%s reported this comment as not spam"
 msgstr "%s认定这不是垃圾评论"
 
-#: class.akismet-admin.php:787
+#: class.akismet-admin.php:779
 msgid "Cleaning up spam takes time."
 msgstr "清除垃圾评论需要时间。"
 
-#: class.akismet-admin.php:790
+#: class.akismet-admin.php:782
 msgid "Since you joined us, Akismet has saved you %s days!"
 msgstr "自从您加入了我们，Akismet已经帮您节省了%s天！"
 
-#: class.akismet-admin.php:792
+#: class.akismet-admin.php:784
 msgid "Since you joined us, Akismet has saved you %d hours!"
 msgstr "自从您加入了我们，Akismet已经帮您节省了%s小时！"
 
-#: class.akismet-admin.php:794
+#: class.akismet-admin.php:786
 msgid "Since you joined us, Akismet has saved you %d minutes!"
 msgstr "自从您加入了我们，Akismet已经帮您节省了%s分钟！"
 
@@ -643,41 +713,41 @@ msgstr[0] ""
 "<strong class=\"count\">%1$条垃圾评论</strong>已被<strong>Akismet</strong>阻"
 "挡"
 
-#: class.akismet.php:227
+#: class.akismet.php:231
 msgid "Akismet caught this comment as spam"
 msgstr "Akismet认为这是垃圾评论"
 
-#: class.akismet.php:229 class.akismet.php:238
+#: class.akismet.php:233 class.akismet.php:242
 msgid "Comment status was changed to %s"
 msgstr "评论状态改为%s"
 
-#: class.akismet.php:233
+#: class.akismet.php:237
 msgid "Akismet cleared this comment"
 msgstr "Akismet检查通过了此评论"
 
-#: class.akismet.php:236
+#: class.akismet.php:240
 msgid "Comment was caught by wp_blacklist_check"
 msgstr "评论由wp_blacklist_check截获"
 
-#: class.akismet.php:243
+#: class.akismet.php:247
 msgid ""
 "Akismet was unable to check this comment (response: %s), will automatically "
 "retry again later."
 msgstr "Akismet无法复查此条评论（回应：%s），将尽快自动重试。"
 
-#: class.akismet.php:573
+#: class.akismet.php:578
 msgid "Akismet caught this comment as spam during an automatic retry."
 msgstr "经过自动重新检查，Akismet认定这是垃圾评论。"
 
-#: class.akismet.php:575
+#: class.akismet.php:580
 msgid "Akismet cleared this comment during an automatic retry."
 msgstr "Akismet经自动重试后，认定它不是垃圾评论。"
 
-#: class.akismet.php:923
+#: class.akismet.php:991
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Akismet %s需要WordPress 3.0或更高版本。"
 
-#: class.akismet.php:923 views/notice.php:27
+#: class.akismet.php:991 views/notice.php:27
 msgid ""
 "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a "
 "href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
@@ -710,31 +780,31 @@ msgid "%s missed spam, %s false positive"
 msgid_plural "%s missed spam, %s false positives"
 msgstr[0] "%s条未捕获的垃圾评论，%s条误判定"
 
-#: views/config.php:79
+#: views/config.php:109
 msgid "Show approved comments"
 msgstr "显示获准的评论"
 
-#: views/config.php:91
+#: views/config.php:121
 msgid "Note:"
 msgstr "注："
 
-#: views/config.php:116
+#: views/config.php:146
 msgid "Disconnect this account"
 msgstr "断开此账户"
 
-#: views/config.php:122
+#: views/config.php:152
 msgid "Save Changes"
 msgstr "保存更改"
 
-#: views/config.php:166
+#: views/config.php:196
 msgid "Next Billing Date"
 msgstr "下一账单日"
 
-#: views/config.php:178
+#: views/config.php:208
 msgid "Upgrade"
 msgstr "升级"
 
-#: views/config.php:178
+#: views/config.php:208
 msgid "Change"
 msgstr "更改"
 
@@ -747,8 +817,3 @@ msgid ""
 "<strong>Almost done</strong> - activate your account and say goodbye to "
 "comment spam"
 msgstr "<strong>即将完成</strong> - 激活您的帐号，告别垃圾评论"
-
-#~ msgid ""
-#~ "Spam in the <a href=\"%s\">spam folder</a> older than 15 days is deleted "
-#~ "automatically."
-#~ msgstr "在<a href=\"%s\">垃圾文件夹</a>中的垃圾评论会于15天后自动删除。"

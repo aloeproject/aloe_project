@@ -3,7 +3,7 @@
 Plugin Name:WP CN Excerpt
 Plugin URI: http://wordpress.org/plugins/cn-excerpt/
 Description: WordPress高级摘要插件。支持在后台设置摘要长度，摘要最后的显示字符，以及允许哪些html标记在摘要中显示
-Version:4.4.0
+Version:4.4.1
 Author: overtrue
 Author URI: http://weibo.com/joychaocc
 */
@@ -14,7 +14,6 @@ class AdvancedCNExcerpt
     public $textDomain;
     protected $options = array(
         'length'          => 100,
-        'only_excerpt'    => 1,
         'no_shortcode'    => 1,
         'finish_sentence' => 0,
         'ellipsis'        => '...',
@@ -70,11 +69,10 @@ class AdvancedCNExcerpt
 
         // Replace everything
         remove_all_filters('get_the_content');
-        remove_all_filters('get_the_excerpt');
+        //remove_all_filters('get_the_excerpt');
         remove_all_filters('excerpt_length');
 
         add_filter('the_excerpt', array($this, 'filter'), 99999999);
-        add_filter('the_content', array($this, 'filter'), 99999999);
     }
 
     /**
@@ -86,10 +84,6 @@ class AdvancedCNExcerpt
      */
     public function filter($text)
     {
-        if (is_single() || is_page() || is_singular()) {
-            return $text;
-        }
-
         if (!$post = get_post()) {
       	    return false;
       	}
@@ -366,7 +360,6 @@ class AdvancedCNExcerpt
     protected function updateOptions()
     {
         $maxLength      = (int)$_POST[$this->name . '_length'];
-        $onlyExcerpt    = ('on' == $_POST[$this->name . '_only_excerpt']) ? 0 : 1;
         $noShortcode    = ('on' == $_POST[$this->name . '_no_shortcode']) ? 1 : 0;
         $finishSentence = ('on' == $_POST[$this->name . '_finish_sentence']) ? 1 : 0;
         $addLink        = ('on' == $_POST[$this->name . '_add_link']) ? 1 : 0;
@@ -379,7 +372,6 @@ class AdvancedCNExcerpt
         }
 
         update_option($this->name . '_length', $maxLength);
-        update_option($this->name . '_only_excerpt', $onlyExcerpt);
         update_option($this->name . '_no_shortcode', $noShortcode);
         update_option($this->name . '_finish_sentence', $finishSentence);
         update_option($this->name . '_ellipsis', $ellipsis);
